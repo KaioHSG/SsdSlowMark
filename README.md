@@ -1,11 +1,5 @@
+## SSD SlowMark
+SsdSlowMark is yet another tool for measuring of SSD speed. Please find more details at [tools4free.github.io/ssd-slow-mark](https://tools4free.github.io/ssd-slow-mark).
 
-SSD SlowMark
-============
-
-SsdSlowMark is yet another tool for measuring of SSD speed.
-Please find more details at [tools4free.github.io/ssd-slow-mark](https://tools4free.github.io/ssd-slow-mark).
-
-Development
-===========
-
+## Development
 Tool is written in Java and uses Gradle as build system.
