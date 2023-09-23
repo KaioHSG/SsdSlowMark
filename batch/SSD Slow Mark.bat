@@ -1,4 +1,6 @@
 @echo off
+
+:: ============== Default Settings ==============
 set Version=0.2
 set SsdSlowMark=ssd-slow-mark.jar
 set Java=jre-1.8\java.exe
@@ -11,6 +13,8 @@ set ResultsFolder=./
 set ImageWidth=800
 set ImageHeight=600
 set ImagePadding=60
+:: ==============================================
+
 title SSD Slow Mark
 echo SSD Slow Mark (v%Version%)
 echo.
