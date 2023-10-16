@@ -1,7 +1,5 @@
 @echo off
 set Version=0.2
-
-:SsmConfig
 if exist ssm-config.cfg (
     for /f "skip=4" %%l in (ssm-config.cfg) do if not defined SsdSlowMark set SsdSlowMark=%%l
     for /f "skip=7" %%l in (ssm-config.cfg) do if not defined Java set Java=%%l
@@ -19,7 +17,6 @@ if exist ssm-config.cfg (
     pause > nul
     exit
 )
-
 if not exist %SsdSlowMark% (
     echo SSD Slow Mark file "%SsdSlowMark%" not found. Download it again in "https://github.com/KaioHSG/SsdSlowMark/releases".
     pause > nul
