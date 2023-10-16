@@ -1,36 +1,3 @@
-::[Bat To Exe Converter]
-::
-::YAwzoRdxOk+EWAjk
-::fBw5plQjdCyDJGyX8VAjFDBVRQu+D2SvFLYZ1O7y4++Unl4OWa82e4DVlL2NL4A=
-::YAwzuBVtJxjWCl3EqQJgSA==
-::ZR4luwNxJguZRRnk
-::Yhs/ulQjdF+5
-::cxAkpRVqdFKZSDk=
-::cBs/ulQjdF+5
-::ZR41oxFsdFKZSDk=
-::eBoioBt6dFKZSDk=
-::cRo6pxp7LAbNWATEpCI=
-::egkzugNsPRvcWATEpCI=
-::dAsiuh18IRvcCxnZtBJQ
-::cRYluBh/LU+EWAnk
-::YxY4rhs+aU+IeA==
-::cxY6rQJ7JhzQF1fEqQJgZksaHkrSXA==
-::ZQ05rAF9IBncCkqN+0xwdVsEAlbi
-::ZQ05rAF9IAHYFVzEqQIDGz8UfwiNKyuXB6cXiA==
-::eg0/rx1wNQPfEVWB+kM9LVsJDBeRMSa4B6FS6unvjw==
-::fBEirQZwNQPfEVWB+kM9LVsJDBeRMQs=
-::cRolqwZ3JBvQF1fEqQITIB5XR0SKM3z6FbkT/6ji4P+V4n4ucKI2a8G7
-::dhA7uBVwLU+EWE2L+04jfB1GSQHi
-::YQ03rBFzNR3SWATElA==
-::dhAmsQZ3MwfNWATE4E0/JAgAShaHOSf6LbQV56jT3M3n
-::ZQ0/vhVqMQ3MEVWAtB9wSA==
-::Zg8zqx1/OA3MEVWAtB9wSA==
-::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJGyX8VAjFDBVRQu+D2SvFLYZ1Nvo69mLrVowVfA0WprS1rCyE9M3qnboeoFt+3tIk4UJFB44
-::YB416Ek+ZG8=
-::
-::
-::978f952a14a936cc963da21a135fa983
 @echo off
 set Version=0.2
 
