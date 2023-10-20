@@ -4,7 +4,7 @@
 
 ## Why Win SSD Slow Mark?
 
-After discovering that conventional programs like *CrystalDiskMark* or *AS SSD* only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching/), which is normally no larger than 10 GB. I decided to use *SSD SlowMark*, but realized that it was quite complicated for a Windows layman. So I created __*Win SSD Slow Mark*__ which is an unofficial build of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark/).
+After discovering that conventional programs like *CrystalDiskMark* or *AS SSD* only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching/), which is normally no larger than 10 GB. I decided to use *SSD SlowMark*, but realized that it was quite complicated for a Windows layman. So I created **Win SSD Slow Mark** which is an unofficial build of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark/).
 
 ## How to test?
 
