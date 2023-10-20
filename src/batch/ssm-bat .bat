@@ -1,5 +1,5 @@
 @echo off
-set Version=0.2
+set Version=0.2.3
 if exist ssm-config.cfg (
     for /f "skip=4" %%l in (ssm-config.cfg) do if not defined SsdSlowMark set SsdSlowMark=%%l
     for /f "skip=7" %%l in (ssm-config.cfg) do if not defined Java set Java=%%l
@@ -13,17 +13,17 @@ if exist ssm-config.cfg (
     for /f "skip=31" %%l in (ssm-config.cfg) do if not defined ImageHeight set ImageHeight=%%l
     for /f "skip=34" %%l in (ssm-config.cfg) do if not defined ImagePadding set ImagePadding=%%l
 ) else (
-    echo Configuration file "ssm-config.cfg" not found. Download it again in "https://github.com/KaioHSG/SsdSlowMark/releases".
+    echo Configuration file "ssm-config.cfg" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark/".
     pause > nul
     exit
 )
 if not exist %SsdSlowMark% (
-    echo SSD Slow Mark file "%SsdSlowMark%" not found. Download it again in "https://github.com/KaioHSG/SsdSlowMark/releases".
+    echo SSD Slow Mark file "%SsdSlowMark%" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark/".
     pause > nul
     exit
 )
 if not exist %Java% (
-    echo Java file "%Java%" not found. Download it again in "https://github.com/KaioHSG/SsdSlowMark/releases".
+    echo Java file "%Java%" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark/".
     pause > nul
     exit
 )
