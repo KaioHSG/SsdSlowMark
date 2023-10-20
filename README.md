@@ -31,3 +31,7 @@ In generated report you will find:
   ![report-chart](https://github.com/KaioHSG/WinSsdSlowMark/assets/96930584/878df293-b789-48e5-98c8-8dff51e9f97f)
 
 * Raw metrics are collected into CSV files. You may use them to build aggregated data for multiple drives in Excel or similar tool.
+
+## Credits:
+
+This is all a fork of [*SlowMark SSD*](https://github.com/tools4free/SsdSlowMark) created by tools4free. I just made a build for Windows.
