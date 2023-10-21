@@ -1,5 +1,6 @@
 @echo off
 set Version=0.2.3
+title Win SSD Slow Mark
 if exist ssm-config.cfg (
     for /f "skip=4" %%l in (ssm-config.cfg) do if not defined SsdSlowMark set SsdSlowMark=%%l
     for /f "skip=7" %%l in (ssm-config.cfg) do if not defined Java set Java=%%l
@@ -18,7 +19,7 @@ if exist ssm-config.cfg (
     exit
 )
 if not exist %SsdSlowMark% (
-    echo SSD Slow Mark file "%SsdSlowMark%" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark".
+    echo SSD SlowMark file "%SsdSlowMark%" not found. Download it again in "https://github.com/tools4free/SsdSlowMark".
     pause > nul
     exit
 )
@@ -32,8 +33,7 @@ if not exist %Java% (
       set Java=java
    )
 )
-title SSD Slow Mark
-echo SSD Slow Mark (v%Version%)
+echo Win SSD Slow Mark (v%Version%)
 echo.
 echo Credits:
 echo --------------------------------------
@@ -47,12 +47,12 @@ if %FileCount% equ a (goto :AdvancedMode)
 if %FileCount% equ A (goto :AdvancedMode)
 
 :StartSsm
-title SSD Slow Mark - Testing...
+title Win SSD Slow Mark - Testing...
 cls
 echo Start: %Date% - %Time%
 echo.
 "%Java%" -jar %SsdSlowMark% fc=%FileCount% test=%TestType% fs=%FileSize% bs=%BlockSize% out=%DumpFolder% in=%DumpFolder% rpt=%ResultsFolder% iw=%ImageWidth% ih=%ImageHeight% ip=%ImagePadding%
-title SSD Slow Mark - Done!
+title Win SSD Slow Mark - Done!
 echo.
 echo Finish: %Date% - %Time%
 echo ======================================
@@ -74,7 +74,7 @@ if %ErrorLevel% equ 2 (
 
 :AdvancedMode
 cls
-echo SSD Slow Mark (v%Version%) - Advanced Mode
+echo Win SSD Slow Mark (v%Version%) - Advanced Mode
 echo.
 echo Credits:
 echo --------------------------------------
