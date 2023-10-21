@@ -8,9 +8,7 @@ After discovering that conventional programs like *CrystalDiskMark* or *AS SSD* 
 
 ## How to test?
 
-**1**. Install the latest [Java](https://www.java.com/download) version.
-
-**2**. Run `Win SSD Slow Mark.exe`.
+Just run `Win SSD Slow Mark.exe`.
 
 ## What's in report?
 
