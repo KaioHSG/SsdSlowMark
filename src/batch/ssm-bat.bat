@@ -13,19 +13,24 @@ if exist ssm-config.cfg (
     for /f "skip=31" %%l in (ssm-config.cfg) do if not defined ImageHeight set ImageHeight=%%l
     for /f "skip=34" %%l in (ssm-config.cfg) do if not defined ImagePadding set ImagePadding=%%l
 ) else (
-    echo Configuration file "ssm-config.cfg" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark/".
+    echo Configuration file "ssm-config.cfg" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark".
     pause > nul
     exit
 )
 if not exist %SsdSlowMark% (
-    echo SSD Slow Mark file "%SsdSlowMark%" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark/".
+    echo SSD Slow Mark file "%SsdSlowMark%" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark".
     pause > nul
     exit
 )
 if not exist %Java% (
-    echo Java file "%Java%" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark/".
-    pause > nul
-    exit
+   reg query HKEY_CLASSES_ROOT\Applications\java.exe > nul
+   if %ErrorLevel% neq 0 (
+      echo Java not fund in "%Java%". Download it again in "https://www.java.com/download".
+      pause > nul
+      exit
+   ) else (
+      set Java=java
+   )
 )
 title SSD Slow Mark
 echo SSD Slow Mark (v%Version%)
@@ -46,7 +51,7 @@ title SSD Slow Mark - Testing...
 cls
 echo Start: %Date% - %Time%
 echo.
-%Java% -jar %SsdSlowMark% fc=%FileCount% test=%TestType% fs=%FileSize% bs=%BlockSize% out=%DumpFolder% in=%DumpFolder% rpt=%ResultsFolder% iw=%ImageWidth% ih=%ImageHeight% ip=%ImagePadding%
+"%Java%" -jar %SsdSlowMark% fc=%FileCount% test=%TestType% fs=%FileSize% bs=%BlockSize% out=%DumpFolder% in=%DumpFolder% rpt=%ResultsFolder% iw=%ImageWidth% ih=%ImageHeight% ip=%ImagePadding%
 title SSD Slow Mark - Done!
 echo.
 echo Finish: %Date% - %Time%
