@@ -10,7 +10,7 @@ After discovering that conventional programs like *CrystalDiskMark* or *AS SSD* 
 
 Just run `Win SSD Slow Mark.exe`.
 
-If you want, download the batch version [here](https://github.com/KaioHSG/WinSsdSlowMark/tree/main/src/batch) (you will need [Java](https://www.java.com/download)).
+If you want, download the batch version [here](https://github.com/KaioHSG/WinSsdSlowMark/tree/main/src/batch) (you will need [Java](https://www.java.com/download) and [SSD SlowMark](https://github.com/tools4free/SsdSlowMark)).
 
 ## What's in report?
 
@@ -36,4 +36,4 @@ In generated report you will find:
 
 ## Credits:
 
-This is all a fork of [*SlowMark SSD*](https://github.com/tools4free/SsdSlowMark) created by tools4free. I just made a build for Windows.
+This is all a fork of [SlowMark SSD](https://github.com/tools4free/SsdSlowMark) created by tools4free. I just made a build for Windows.
