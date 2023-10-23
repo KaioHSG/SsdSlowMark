@@ -14,12 +14,12 @@ if exist ssm-config.cfg (
     for /f "skip=31" %%l in (ssm-config.cfg) do if not defined ImageHeight set ImageHeight=%%l
     for /f "skip=34" %%l in (ssm-config.cfg) do if not defined ImagePadding set ImagePadding=%%l
 ) else (
-    echo Configuration file "ssm-config.cfg" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark".
+    echo Configuration file "ssm-config.cfg" not found. Download it again in "https://github.com/KaioHSG/WinSsdSlowMark/releases/latest".
     pause > nul
     exit
 )
 if not exist %SsdSlowMark% (
-    echo SSD SlowMark file "%SsdSlowMark%" not found. Download it again in "https://github.com/tools4free/SsdSlowMark".
+    echo SSD SlowMark file "%SsdSlowMark%" not found. Download it again in "https://github.com/tools4free/SsdSlowMark/releases/latest".
     pause > nul
     exit
 )
