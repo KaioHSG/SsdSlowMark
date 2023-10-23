@@ -8,9 +8,9 @@ After discovering that conventional programs like *CrystalDiskMark* or *AS SSD* 
 
 ## How to test?
 
-**1**. Download a version of [Win SSD Slow Mark](https://github.com/KaioHSG/WinSsdSlowMark/releases/latest) (`Win-SSD-Slow-Mark.exe.zip` is best).
+**1**. Download a version of [**Win SSD Slow Mark**](https://github.com/KaioHSG/WinSsdSlowMark/releases/latest) (`Win-SSD-Slow-Mark.exe.zip` is best).
 
-**2**. If you downloaded `Win SSD Slow Mark.exe` just run it. If you downloaded `Win SSD Slow Mark.bat` you will need [Java](https://www.java.com/download) and [SSD SlowMark](https://github.com/tools4free/SsdSlowMark/releases/latest).
+**2**. If you downloaded `Win SSD Slow Mark.exe` just run it. If you downloaded `Win SSD Slow Mark.bat` you will need [**Java**](https://www.java.com/download) and [**SSD SlowMark**](https://github.com/tools4free/SsdSlowMark/releases/latest).
 
 ## What's in report?
 
