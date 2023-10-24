@@ -34,7 +34,7 @@ In generated report you will find:
 
 * Raw metrics are collected into CSV files. You may use them to build aggregated data for multiple drives in Excel or similar tool.
 
-## Credits:
+## Credits
 
 This is all a fork of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark) created by tools4free. I just made a build for Windows.
 
