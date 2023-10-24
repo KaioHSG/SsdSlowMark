@@ -26,11 +26,11 @@ In generated report you will find:
 
   * Most typical write speed - How quickly you can fill your disk depends on that.
 
-  ![report-averages](https://github.com/KaioHSG/WinSsdSlowMark/assets/96930584/ac9be217-62b9-432c-abc1-2bb353e9633d)
+  ![Report Averages](https://github.com/KaioHSG/WinSsdSlowMark/assets/96930584/ac9be217-62b9-432c-abc1-2bb353e9633d)
 
 * Detailed chart of read and write test:
 
-  ![report-chart](https://github.com/KaioHSG/WinSsdSlowMark/assets/96930584/878df293-b789-48e5-98c8-8dff51e9f97f)
+  ![Report Chart](https://github.com/KaioHSG/WinSsdSlowMark/assets/96930584/878df293-b789-48e5-98c8-8dff51e9f97f)
 
 * Raw metrics are collected into CSV files. You may use them to build aggregated data for multiple drives in Excel or similar tool.
 
