@@ -36,6 +36,6 @@ In generated report you will find:
 
 ## Credits
 
-This is all a fork of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark) created by tools4free. I just made a build for Windows.
+This is all a fork of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark) created by [tools4free](https://github.com/tools4free). I just made a build for Windows.
 
 **SSD SlowMark** website: https://tools4free.github.io/ssd-slow-mark
