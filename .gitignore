@@ -7,4 +7,4 @@ target
 out
 *.iml
 wmic/*.txt
-ssm-build
+_wssm-build
