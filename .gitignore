@@ -1,9 +1,2 @@
-.idea
-.gradle
-_*
-logs
+notes.txt
 build
-target
-out
-*.iml
-wmic/*.txt
