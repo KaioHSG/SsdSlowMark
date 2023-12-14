@@ -195,6 +195,8 @@ public class ResultsWriter {
 
         String html = resourceAsString(this, "report-template.html");
 
+        System.out.println(html);
+
         html = html.replace("{disk-model}", diskModel);
         html = html.replace("{test-size}", String.format(US, "%.0f", chart.dataSizeGb));
         html = html.replace("{version-info}", versionInfo);
@@ -342,7 +344,7 @@ public class ResultsWriter {
         int[] pctlMin = new int[101];
         float allMin = Float.MAX_VALUE, allMax = 0, allAvg = 0;
 
-        for( int x = 0, i = 0; i < cChunks; x++, i++ ) {
+        for( int i = 0; i < cChunks; i++ ) {
             Chunk c = chunks.get(i);
             allMin = Math.min(allMin, c.min);
             allMax = Math.max(allMax, c.max);
@@ -352,7 +354,7 @@ public class ResultsWriter {
 
         float minMaxRange = allMax - allMin;
         int maxPctl = 5;
-        for( int x = 0, i = 0; i < cChunks; x++, i++ ) {
+        for( int i = 0; i < cChunks; i++ ) {
             Chunk c = chunks.get(i);
 
             addPctl(pctlAvg, maxPctl, (int)(100.0 * (c.avg - allMin) / minMaxRange));

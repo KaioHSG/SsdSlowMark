@@ -214,14 +214,14 @@ public class Gui extends JFrame implements ActionListener{
 
         if(e.getSource() == starButton) {
             //Start SSM
-            System.out.println("'" + fileCount + "' '" + fileSize + "' '" + blockSize + "'");
-            System.out.println("'" + dumpFolder + "' '" + resultFolder + "'");
-            System.out.println("'" + imageWidth + "' '" + imageHeight + "' '" + imagePadding + "'");
+            System.out.println("'" + fileCount + "', '" + fileSize + "', '" + blockSize + "'");
+            System.out.println("'" + dumpFolder + "', '" + resultFolder + "'");
+            System.out.println("'" + imageWidth + "', '" + imageHeight + "', '" + imagePadding + "'");
             System.out.println("'" + testType + "'");
 
             startSsm = true;
 
-            tools4free.ssm.SsdSlowMark ssm = new tools4free.ssm.SsdSlowMark();
+            new tools4free.ssm.SsdSlowMark();
         }
         if(e.getSource() == creditsButton) {
             //Credits

@@ -2,7 +2,6 @@ package tools4free.ssm;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.nio.file.FileVisitResult;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

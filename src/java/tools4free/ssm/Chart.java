@@ -185,7 +185,6 @@ public class Chart {
 
         // draw 3 most typical percentiles
         Stroke dashed = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[] {9}, 0);
-        float _allMin = allMin;
         BiConsumer<Float,Color> pctrlRenderer = (pctlValue, clr) -> {
             int yMid = btm - (int)(ch * (pctlValue - allMin) / minMaxRange);
             g.setColor(clr != null ? clr : Color.LIGHT_GRAY);
