@@ -32,7 +32,6 @@ public class ConsoleLog extends JFrame {
         logTextArea.setEditable(false);
         PrintStream printStream = new PrintStream(new CustomOutputStream(logTextArea));
         System.setOut(printStream);
-        System.setErr(printStream);
         logPanel.add(logTextArea);
 
         JScrollPane scroller = new JScrollPane(logTextArea);

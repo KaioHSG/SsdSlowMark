@@ -29,7 +29,6 @@ public class ResultsWriter {
 
     public File writeTestResults(TestCase testCase) {
         System.setOut(new SsdSlowMark().originalOut);
-        System.setErr(new SsdSlowMark().originalOut);
 
         String testKind = testCase.testKind;
         File tcRoot = testCase.root;
