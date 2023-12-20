@@ -1,26 +1,26 @@
 package tools4free.ssm;
 
-import kaiohsg.gui.Gui;
+import kaiohsg.gui.*;
 
 public class Config {
 
-    String test  = "rw";        // r | w | rw
+    String test;   // r | w | rw
 
-    int bs       = 8 * 1024;    // KB, block size
-    int fs       = 1 * 1024;    // MB, size of one output file
-    int fc       = 1000;          // number of generated files
+    int bs;        // KB, block size
+    int fs;        // MB, size of one output file
+    int fc;        // number of generated files
 
-    String out   = "dump";     // directory to generate output files
-    String in    = "dump";     // directory to read input file
-    String rpt   = "./";        // base name for output folder
+    String out;    // directory to generate output files
+    String in;     // directory to read input file
+    String rpt;    // base name for output folder
 
-    int iw       = 800;         // px, width of the output image
-    int ih       = 600;         // px, height of the output image
-    int ip       = 60;          // px, padding of the image
+    int iw;        // px, width of the output image
+    int ih;        // px, height of the output image
+    int ip;        // px, padding of the image
 
     public Config fromArgs(String[] args) throws InterruptedException {
 
-        Gui gui = new kaiohsg.gui.Gui();
+        Gui gui = new Gui();
 
         while (!gui.startSsm)
             Thread.sleep(0);
@@ -31,13 +31,15 @@ public class Config {
 
         out = gui.dumpFolder;
         in = gui.dumpFolder;
-        rpt = gui.resultFolder;
+        rpt = "./" + gui.resultFolder;
 
         iw = gui.imageWidth;
         ih = gui.imageHeight;
         ip = gui.imagePadding;
 
         test = gui.testType;
+        
+        new ConsoleLog();
 
         Thread.sleep(500);
 

@@ -32,7 +32,7 @@ public class Gui extends JFrame implements ActionListener{
     public String dumpFolder = "dump";
 
     JTextField resultTextField;
-    public String resultFolder = "";
+    public String resultFolder = "Results";
 
     JSpinner imageWidthSpinner;
     public int imageWidth = 800;
@@ -46,7 +46,7 @@ public class Gui extends JFrame implements ActionListener{
     JRadioButton wButton;
     JRadioButton rButton;
     JRadioButton rwButton;
-    public String testType = "rw";
+    public String testType;
     
     JButton starButton;
     JButton creditsButton;
@@ -221,10 +221,9 @@ public class Gui extends JFrame implements ActionListener{
             System.out.println("'" + dumpFolder + "', '" + resultFolder + "'");
             System.out.println("'" + imageWidth + "', '" + imageHeight + "', '" + imagePadding + "'");
             System.out.println("'" + testType + "'");
-            
-            startSsm = true;
 
-            //new tools4free.ssm.SsdSlowMark();
+            dispose();
+            startSsm = true;
         }
         if(e.getSource() == creditsButton) {
             // Credits

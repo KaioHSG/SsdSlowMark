@@ -37,10 +37,11 @@ public class TestReader extends TestCase {
         float blockSizeMb = config.bs / (float)KB;
         byte[] data = new byte[blockSize];
 
+        echoLn("");
         echoLn("Files reader:");
-        echoLn("  Root dir: %s", root.getAbsolutePath());
-        echoLn("  Disk model: %s", diskModel);
-        echoLn("--------------------------------------");
+        echoLn("       Root dir: %s", root.getAbsolutePath());
+        echoLn("       Disk model: %s", diskModel);
+        echoLn("--------------------------------------------------------------------------------------------------------------------------------------------------");
 
         allBlocksTmp.add(blocksTmp);
         startTime = System.currentTimeMillis();
@@ -66,11 +67,9 @@ public class TestReader extends TestCase {
                     long fileMB = 0;
                     File file = path.toFile();
                     float perfMin = Float.MAX_VALUE, perfMax = Float.MIN_VALUE;
-                    long echoAfter = System.currentTimeMillis() + 100;
 
                     try( FileInputStream fis = new FileInputStream(file) ) {
-                        long pos = 0;
-                        for( long n = 1; pos + data.length <= fileSize; n++ ) {
+                        for(long pos = 0; pos + data.length <= fileSize;) {
                             if( stop )
                                 return FileVisitResult.TERMINATE;
 
@@ -89,16 +88,11 @@ public class TestReader extends TestCase {
 
                             float sec = (finished - started) / NANO_SEC;
                             float perfBlock = blockSizeMb / sec;
-                            long now = System.currentTimeMillis();
 
                             blocksTmp[cBlocksTmp++] = perfBlock;
                             cAllBlocksTmp++;
                             perfMin = min(perfMin, perfBlock);
                             perfMax = max(perfMax, perfBlock);
-                            if( now > echoAfter ) {
-                                echoAfter = now + 100;
-                                printPerf("Read", file, fileStarted, fileMB, perfMin, perfMax, n, pos / (double)fileSize);
-                            }
                         }
                     }
                     catch( Exception e ) {
@@ -106,7 +100,7 @@ public class TestReader extends TestCase {
                     }
 
                     printPerf("Read", file, fileStarted, fileMB, perfMin, perfMax);
-                    echoLn("                       ");
+                    echoLn("");
 
                     return FileVisitResult.CONTINUE;
                 }
@@ -137,9 +131,9 @@ public class TestReader extends TestCase {
             pos += blocki.length;
         }
 
+        echoLn("--------------------------------------------------------------------------------------------------------------------------------------------------");
         echoLn("Read test complete");
-        echoLn("");
-        echoLn("");
+        echoLn("================");
 
         finished = true;
     }

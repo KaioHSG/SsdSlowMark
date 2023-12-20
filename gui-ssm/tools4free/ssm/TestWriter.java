@@ -46,13 +46,14 @@ public class TestWriter extends TestCase {
 
         File file = null;
 
+        echoLn("");
         echoLn("Files writer:");
-        echoLn("  File count: %s", config.fc);
-        echoLn("  File size: %s MB", config.fs);
-        echoLn("  Block size: %.1f MB", config.bs / 1024.0);
-        echoLn("  Root dir: %s", root.getAbsolutePath());
-        echoLn("  Disk model: %s", diskModel);
-        echoLn("--------------------------------------");
+        echoLn("       File count: %s", config.fc);
+        echoLn("       File size: %s MB", config.fs);
+        echoLn("       Block size: %.1f MB", config.bs / 1024.0);
+        echoLn("       Root dir: %s", root.getAbsolutePath());
+        echoLn("       Disk model: %s", diskModel);
+        echoLn("--------------------------------------------------------------------------------------------------------------------------------------------------");
 
         startTime = System.currentTimeMillis();
         try {
@@ -63,7 +64,6 @@ public class TestWriter extends TestCase {
                 long fileMB = 0;
                 long freeSpace = root.getFreeSpace();
                 float perfMin = Float.MAX_VALUE, perfMax = Float.MIN_VALUE;
-                long echoAfter = System.currentTimeMillis() + 100;
 
                 if( freeSpace - fileSizeLim < SsdSlowMark.GB ) {
                     echoLn("  Abort, free space: %.1f", freeSpace / (float)SsdSlowMark.GB);
@@ -74,7 +74,7 @@ public class TestWriter extends TestCase {
                 try( FileOutputStream fos = new FileOutputStream(file) ) {
                     createdFiles.add(file);
 
-                    for( long fs = 0, n = 1; !stop && fs < fileSizeLim; fs += data.length, n++ ) {
+                    for( long fs = 0; !stop && fs < fileSizeLim; fs += data.length) {
                         long started = System.nanoTime();
                         {
                             fos.write(data);
@@ -85,21 +85,16 @@ public class TestWriter extends TestCase {
 
                         float sec = (finished - started) / SsdSlowMark.NANO_SEC;
                         float perfBlock = blockSizeMb / sec;
-                        long now = System.currentTimeMillis();
 
                         perfMin = min(perfMin, perfBlock);
                         perfMax = max(perfMax, perfBlock);
                         blocks[cBlocks++] = perfBlock;
                         fileMB += data.length;
-                        if( now > echoAfter ) {
-                            echoAfter = now + 100;
-                            printPerf("Write", file, fileStarted, fileMB, perfMin, perfMax, n, fs / (double)fileSizeLim);
-                        }
                     }
                 }
 
                 printPerf("Write", file, fileStarted, fileMB, perfMin, perfMax);
-                echoLn("                       ");
+                echoLn("");
             }
         }
         catch( Exception e ) {
@@ -110,9 +105,9 @@ public class TestWriter extends TestCase {
         stopTime = System.currentTimeMillis();
         elapsedMs = stopTime - startTime;
 
+        echoLn("--------------------------------------------------------------------------------------------------------------------------------------------------");
         echoLn("Write test complete");
-        echoLn("");
-        echoLn("");
+        echoLn("================");
 
         finished = true;
     }

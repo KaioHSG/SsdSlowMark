@@ -3,11 +3,17 @@ package tools4free.ssm;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.util.Formatter;
 
 import static java.util.Locale.US;
 
 public class SsdSlowMark {
+
+    static String ssmVersion = "0.2.3";
+    static String javaVersion;
+    static String versionInfo;
+    static SysInfo si;
 
     final static int KB = 1024;
     final static int MB = 1024 * KB;
@@ -21,22 +27,20 @@ public class SsdSlowMark {
     private static ResultsWriter output;
     private static boolean shutdownStarted;
 
-    static SysInfo si;
-    static String ssmVersion;
-    static String javaVersion;
-    static String versionInfo;
-
     private static boolean resultsWritten;
     private static boolean statsWriting;
 
+    public static PrintStream originalOut = System.out;
+
     public static void main(String[] args) throws Exception {
+
+        System.out.println(originalOut);
 
         config = new Config().fromArgs(args);
 
         si = new SysInfo();
         versionInfo = versionInfo();
-        echoLn(versionInfo);
-        echoLn("");
+        echoLn("* " + versionInfo + " *");
         switch( config.test ) {
             case "agg":
                 new ResultsAggregator(config).run();
@@ -44,8 +48,6 @@ public class SsdSlowMark {
         }
 
         output = new ResultsWriter(config);
-        System.out.println("Press ENTER to abort and generate report...");
-        System.out.println("");
 
         if( !shutdownStarted && config.test.contains("w") )
             (writer = new TestWriter(config)).start();
@@ -98,7 +100,6 @@ public class SsdSlowMark {
     }
 
     static String versionInfo() {
-        ssmVersion = "0.2.3";
         javaVersion = javaVersion();
         return "GUI SSD Slow Mark v" + ssmVersion
                     + ", CPU: " + si.cpuModel
@@ -157,8 +158,10 @@ public class SsdSlowMark {
 
     private static void progressMonitor() {
         waitFinished();
-        if( writeResults() )
+        /* FINISH EXIT
+        if( writeResults())
             System.exit(0);
+        */
     }
 
     private static void waitFinished() {
