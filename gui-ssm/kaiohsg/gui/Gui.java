@@ -32,7 +32,7 @@ public class Gui extends JFrame implements ActionListener{
     public String dumpFolder = "dump";
 
     JTextField resultTextField;
-    public String resultFolder = "./";
+    public String resultFolder = "";
 
     JSpinner imageWidthSpinner;
     public int imageWidth = 800;
@@ -62,15 +62,15 @@ public class Gui extends JFrame implements ActionListener{
 
         JLabel label;
 
-        //File panel
+        // File panel
         JPanel filePanel = new JPanel();
         filePanel.setLocation(0,0);
         filePanel.setSize(634,60);
         filePanel.setBorder(new TitledBorder("Files"));
 
-        SpinnerModel fileCountModel = new SpinnerNumberModel(1000, 1, 1000, 1);
-        SpinnerModel fileSizetModel = new SpinnerNumberModel(1024, 1, 32768, 1);
-        SpinnerModel blockModel = new SpinnerNumberModel(8192, 4, 1048576, 1);
+        SpinnerModel fileCountModel = new SpinnerNumberModel(fileCount, 1, 1000, 1);
+        SpinnerModel fileSizetModel = new SpinnerNumberModel(fileSize, 1, 32768, 1);
+        SpinnerModel blockModel = new SpinnerNumberModel(blockSize, 4, 1048576, 1);
 
         fileCountSpinner = new JSpinner(fileCountModel);
         fileSizeSpinner = new JSpinner(fileSizetModel);
@@ -90,15 +90,15 @@ public class Gui extends JFrame implements ActionListener{
 
         add(filePanel);
 
-        //Folder panel
+        // Folder panel
         JPanel folderPanel = new JPanel();
         folderPanel.setLocation(0,60);
         folderPanel.setSize(634,120);
         folderPanel.setBorder(new TitledBorder("Folders"));
         folderPanel.setLayout(new GridLayout(0,1));
 
-        dumpTextField = new JTextField("dump");
-        resultTextField = new JTextField("./");
+        dumpTextField = new JTextField(dumpFolder);
+        resultTextField = new JTextField(resultFolder);
 
         label = new JLabel("Dump folder:");
         folderPanel.add(label);
@@ -110,15 +110,15 @@ public class Gui extends JFrame implements ActionListener{
 
         add(folderPanel);
 
-        //Image panel
+        // Image panel
         JPanel imagePanel = new JPanel();
         imagePanel.setLocation(0,180);
         imagePanel.setSize(634,60);
         imagePanel.setBorder(new TitledBorder("Images"));
 
-        SpinnerModel imageWidthModel = new SpinnerNumberModel(800, 1, 9999, 1);
-        SpinnerModel imageHeightModel = new SpinnerNumberModel(600, 1, 9999, 1);
-        SpinnerModel imagePaddingModel = new SpinnerNumberModel(60, 1, 9999, 1);
+        SpinnerModel imageWidthModel = new SpinnerNumberModel(imageWidth, 1, 9999, 1);
+        SpinnerModel imageHeightModel = new SpinnerNumberModel(imageHeight, 1, 9999, 1);
+        SpinnerModel imagePaddingModel = new SpinnerNumberModel(imagePadding, 1, 9999, 1);
 
         imageWidthSpinner = new JSpinner(imageWidthModel);
         imageHeightSpinner = new JSpinner(imageHeightModel);
@@ -138,15 +138,14 @@ public class Gui extends JFrame implements ActionListener{
 
         add(imagePanel);
 
-        //Test type panel
+        // Test type panel
         JPanel testTypePanel = new JPanel();
         testTypePanel.setLocation(0,240);
         testTypePanel.setSize(634,60);
         testTypePanel.setBorder(new TitledBorder("Test type"));
 
-        wButton = new JRadioButton("Write");
-        wButton.setActionCommand(wButton.getText());
         rButton = new JRadioButton("Read");
+        wButton = new JRadioButton("Write");
         rwButton = new JRadioButton("Write and read", true);
 
         ButtonGroup testTypeGroup = new ButtonGroup();
@@ -160,7 +159,7 @@ public class Gui extends JFrame implements ActionListener{
 
         add(testTypePanel);
 
-        //Button panel
+        // Button panel
         JPanel startPanel = new JPanel();
         startPanel.setLocation(0,300);
         startPanel.setSize(634,60);
@@ -176,14 +175,14 @@ public class Gui extends JFrame implements ActionListener{
 
         add(startPanel);
 
-        //JFrame
+        // JFrame
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //Convert
+        // Convert
         Object o;
         Number n;
 
@@ -209,22 +208,26 @@ public class Gui extends JFrame implements ActionListener{
         dumpFolder = dumpTextField.getText();
         resultFolder = resultTextField.getText();
 
-        testType = "rw";
-
+        if (rButton.isSelected())
+            testType = "r";
+        if (wButton.isSelected())
+            testType = "w";
+        if (rwButton.isSelected())
+            testType = "rw";
 
         if(e.getSource() == starButton) {
-            //Start SSM
-            System.out.println("'" + fileCount + "', '" + fileSize + "', '" + blockSize + "'");
+            // Start SSM
+            System.out.println("\n" + "'" + fileCount + "', '" + fileSize + "', '" + blockSize + "'");
             System.out.println("'" + dumpFolder + "', '" + resultFolder + "'");
             System.out.println("'" + imageWidth + "', '" + imageHeight + "', '" + imagePadding + "'");
             System.out.println("'" + testType + "'");
-
+            
             startSsm = true;
 
-            new tools4free.ssm.SsdSlowMark();
+            //new tools4free.ssm.SsdSlowMark();
         }
         if(e.getSource() == creditsButton) {
-            //Credits
+            // Credits
             JDialog creditsDialog = new JDialog();
             creditsDialog.setResizable(false);
             creditsDialog.setTitle("Credits");
