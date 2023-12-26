@@ -238,7 +238,7 @@ public class Chart {
         g.setColor(Color.RED);
         addChartTitle(test.testKind, test.diskModel);
 
-        drawLabel(g,  left + 4, top - 32, LEFT,  BOTTOM, "SsdSlowMark v" + SsdSlowMark.ssmVersion);
+        drawLabel(g,  left + 4, top - 32, LEFT,  BOTTOM, "GUI SSD Slow Mark - " + SsdSlowMark.gssmVersion);
         drawLabel(g, right - 1, top - 16, RIGHT, BOTTOM,
                 "CPU: " + SsdSlowMark.si.cpuModel
                 + ", MB: " + SsdSlowMark.si.motherBoard);

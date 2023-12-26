@@ -1,6 +1,7 @@
 package tools4free.ssm;
 
 import javax.imageio.ImageIO;
+
 import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
@@ -103,7 +104,7 @@ public class ResultsWriter {
             }
 
             cChunks = chunks.size();
-            echoLn("CSV report: " + file.getAbsolutePath());
+            //echoLn("CSV report: " + file.getAbsolutePath());
         }
         catch( Exception e ) {
             System.err.println("Failed to write to " + file);
@@ -125,7 +126,7 @@ public class ResultsWriter {
         File chartFile = new File(rptDir, baseFileName + "_Chart.png");
         try {
             ImageIO.write(chart.img, "png", chartFile);
-            echoLn("CSV report: " + chartFile.getAbsolutePath());
+            //echoLn("CSV report: " + chartFile.getAbsolutePath());
             // Desktop.getDesktop().open(chartFile);
         }
         catch( IOException e ) {
@@ -187,7 +188,7 @@ public class ResultsWriter {
             // Save as PNG
             try {
                 ImageIO.write(chart.img, "png", chartFile);
-                echoLn("ReadWrite Averages: " + chartFile.getAbsolutePath());
+                //echoLn("ReadWrite Averages: " + chartFile.getAbsolutePath());
                 // Desktop.getDesktop().open(chartFile);
             }
             catch( IOException e ) {
@@ -197,7 +198,7 @@ public class ResultsWriter {
 
         String html = resourceAsString(this, "report-template.html");
 
-        System.out.println(html);
+        //System.out.println(html);
 
         html = html.replace("{disk-model}", diskModel);
         html = html.replace("{test-size}", String.format(US, "%.0f", chart.dataSizeGb));
@@ -228,8 +229,10 @@ public class ResultsWriter {
         File summaryFile = new File(rptDir, diskModel.replace(' ', '_') + "_Summary.html");
         try {
             Files.write(summaryFile.toPath(), html.getBytes(UTF_8));
-            echoLn("HTML report: " + summaryFile.getAbsolutePath());
-            Desktop.getDesktop().open(summaryFile);
+            //echoLn("HTML report: " + summaryFile.getAbsolutePath());
+            // Exit Open
+            if (SsdSlowMark.exitOpen)
+                Desktop.getDesktop().open(summaryFile);
         }
         catch( IOException e ) {
             System.err.println("Failed to write to " + summaryFile + ": " + e.getMessage());
@@ -280,10 +283,10 @@ public class ResultsWriter {
                 wr.write(captions.toString());
                 wr.write(values.toString());
             }
-            echoLn("CSV report: " + fileAvg.getAbsolutePath());
+            //echoLn("CSV report: " + fileAvg.getAbsolutePath());
 
             Pctls pctls = buildPctls(chunks);
-            echoLn(pctls.toString());
+            //echoLn(pctls.toString());
         }
         catch( Exception e ) {
             System.err.println("Failed to write to " + fileAvg);

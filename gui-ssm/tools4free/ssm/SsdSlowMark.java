@@ -6,11 +6,13 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.Formatter;
 
+import kaiohsg.gui.ConsoleLog;
+
 import static java.util.Locale.US;
 
 public class SsdSlowMark {
 
-    static String ssmVersion = "0.2.3";
+    public static String gssmVersion = "1.2.4";
     static String javaVersion;
     static String versionInfo;
     static SysInfo si;
@@ -32,11 +34,15 @@ public class SsdSlowMark {
 
     public static PrintStream originalOut = System.out;
 
+    public static boolean exitOpen;
+
     public static void main(String[] args) throws Exception {
 
         System.out.println(originalOut);
 
         config = new Config().fromArgs(args);
+
+        new ConsoleLog();
 
         si = new SysInfo();
         versionInfo = versionInfo();
@@ -53,8 +59,10 @@ public class SsdSlowMark {
             (writer = new TestWriter(config)).start();
 
         if( !shutdownStarted && config.test.contains("r") ) {
+
             (reader = new TestReader(config, writer)).start();
         }
+        
 
         new Thread(SsdSlowMark::progressMonitor).start();
 
@@ -101,7 +109,7 @@ public class SsdSlowMark {
 
     static String versionInfo() {
         javaVersion = javaVersion();
-        return "GUI SSD Slow Mark v" + ssmVersion
+        return "GUI SSD Slow Mark - " + gssmVersion
                     + ", CPU: " + si.cpuModel
                     + ", MB: " + si.motherBoard
                     + ", OS: " + si.osVersion
@@ -115,7 +123,6 @@ public class SsdSlowMark {
         return javaVer != null ? javaVer : "<unknown java version>";
     }
 
-
     private static boolean writeResults() {
         if( statsWriting ) {
             while( !resultsWritten ) {
@@ -125,6 +132,7 @@ public class SsdSlowMark {
         }
 
         statsWriting = true;
+        System.out.println(exitOpen);
         try {
             File rptDir = null;
             if( writer != null && writer.finished )
@@ -159,7 +167,7 @@ public class SsdSlowMark {
     private static void progressMonitor() {
         waitFinished();
         /* FINISH EXIT
-        if( writeResults())
+        if(writeResults())
             System.exit(0);
         */
     }

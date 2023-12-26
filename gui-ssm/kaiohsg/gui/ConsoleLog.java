@@ -1,10 +1,13 @@
 package kaiohsg.gui;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -12,19 +15,24 @@ import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.TitledBorder;
 
-public class ConsoleLog extends JFrame {
+import tools4free.ssm.SsdSlowMark;
+
+public class ConsoleLog extends JFrame implements ActionListener{
+    JButton exitButton;
+    JButton exitOpenButton;
+    public boolean exitOpen = false;
+
     public ConsoleLog() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLayout(null);
-        setTitle("GUI SSD Slow Mark");
+        setTitle("GUI SSD Slow Mark - Log");
         setSize(650, 380);
 
         // Log Panel
-
         JPanel logPanel = new JPanel();
-        logPanel.setLocation(10,10);
-        logPanel.setSize(614,321);
+        logPanel.setLocation(0,0);
+        logPanel.setSize(634,300);
         logPanel.setBorder(new TitledBorder("Log"));
         logPanel.setLayout(new GridLayout(0,1));
 
@@ -40,9 +48,29 @@ public class ConsoleLog extends JFrame {
         
         add(logPanel);
 
+        // Start Panel
+        JPanel startPanel = new JPanel();
+        startPanel.setLocation(0,300);
+        startPanel.setSize(634,60);
+
+        exitOpenButton = new JButton("Open results");
+        exitOpenButton.addActionListener(this);
+
+        exitButton = new JButton("Exit");
+        exitButton.addActionListener(this);
+
+        startPanel.add(exitOpenButton);
+        startPanel.add(exitButton);
+
+        add(startPanel);
+
         // JFrame
         setLocationRelativeTo(null);
         setVisible(true);
+    }
+
+    void title() {
+        
     }
 
     public class CustomOutputStream extends OutputStream {
@@ -55,6 +83,16 @@ public class ConsoleLog extends JFrame {
         public void write(int b) throws IOException {
             logTextArea.append(String.valueOf((char)b));
             logTextArea.setCaretPosition(logTextArea.getDocument().getLength());
+        }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == exitButton)
+            System.exit(0);
+        if (e.getSource() == exitOpenButton) {
+            SsdSlowMark.exitOpen = true;
+            System.exit(0);
         }
     }
 }

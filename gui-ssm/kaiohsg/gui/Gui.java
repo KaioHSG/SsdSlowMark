@@ -18,6 +18,8 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 
+import tools4free.ssm.SsdSlowMark;
+
 public class Gui extends JFrame implements ActionListener{
     JSpinner fileCountSpinner;
     public int fileCount = 1000;
@@ -159,7 +161,7 @@ public class Gui extends JFrame implements ActionListener{
 
         add(testTypePanel);
 
-        // Button panel
+        // Start Panel
         JPanel startPanel = new JPanel();
         startPanel.setLocation(0,300);
         startPanel.setSize(634,60);
@@ -217,10 +219,12 @@ public class Gui extends JFrame implements ActionListener{
 
         if(e.getSource() == starButton) {
             // Start SSM
+            /*
             System.out.println("\n" + "'" + fileCount + "', '" + fileSize + "', '" + blockSize + "'");
             System.out.println("'" + dumpFolder + "', '" + resultFolder + "'");
             System.out.println("'" + imageWidth + "', '" + imageHeight + "', '" + imagePadding + "'");
             System.out.println("'" + testType + "'");
+            */
 
             dispose();
             startSsm = true;
@@ -230,11 +234,15 @@ public class Gui extends JFrame implements ActionListener{
             JDialog creditsDialog = new JDialog();
             creditsDialog.setResizable(false);
             creditsDialog.setTitle("Credits");
-            creditsDialog.setSize(200, 80);
+            creditsDialog.setSize(200, 100);
             creditsDialog.setLayout(new GridLayout(0,1));
 
             JLabel label;
 
+            label = new JLabel("GUI SSD Slow Mark - " + SsdSlowMark.gssmVersion, SwingConstants.CENTER);
+            creditsDialog.add(label);
+            label = new JLabel();
+            creditsDialog.add(label);
             label = new JLabel("SSM: tools4free", SwingConstants.CENTER);
             creditsDialog.add(label);
             label = new JLabel("GUI: Kaio HSG", SwingConstants.CENTER);

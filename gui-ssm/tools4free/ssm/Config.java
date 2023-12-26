@@ -1,6 +1,6 @@
 package tools4free.ssm;
 
-import kaiohsg.gui.*;
+import kaiohsg.gui.Gui;
 
 public class Config {
 
@@ -38,8 +38,6 @@ public class Config {
         ip = gui.imagePadding;
 
         test = gui.testType;
-        
-        new ConsoleLog();
 
         Thread.sleep(500);
 
