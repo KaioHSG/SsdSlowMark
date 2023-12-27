@@ -27,8 +27,8 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
   * `File count` * `File size` = Total size of all files.
 * `Block size` = Minimum amount of reading and writing.
 
-* `Dump folder` = Folder where the files generated for the test are located.
-* `Results folder` = Test results folder.
+* `Dump folder` = Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it.
+* `Results folder` = Test results folder. It must be kept in the program directory.
 
 * `Images` = Configuration for generated images.
 
