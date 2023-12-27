@@ -25,9 +25,9 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ## How to test?
 
-**1**. Download a version of [**GUI SSD Slow Mark**](https://github.com/kaiohsg/gui-ssd-slow-mark/releases/latest) (`GUI-SSD-Slow-Mark.exe.zip` is best).
+**1**. Download a version of [**GUI SSD Slow Mark**](https://github.com/kaiohsg/gui-ssd-slow-mark/releases/latest) (`GUI-SSD-Slow-Mark.exe` is best).
 
-**2**. If you downloaded `GUI SSD Slow Mark.exe` just run it. If you downloaded `GUI SSD Slow Mark.jar` you will need [**Java**](https://www.java.com/download).
+**2**. If you downloaded `GUI-SSD-Slow-Mark.exe` just run it. If you downloaded `GUI-SSD-Slow-Mark.jar` you will need [**Java**](https://www.java.com/download).
 
 ## What's in report?
 
