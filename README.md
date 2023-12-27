@@ -7,7 +7,7 @@
 After discovering that conventional programs like *CrystalDiskMark* only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching), which normally does not exceed 10 GB. I decided to use SSD SlowMark, and realized that I could create an interface for it and make it easier for everyone. So I created the **GUI SSD Slow Mark**, which is an unofficial version of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark).
 
 <details>
- <summary><h3>Images</h3></summary>
+ <summary><h3>Interface images</h3></summary>
 
  **Menu**
 
