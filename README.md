@@ -1,5 +1,10 @@
 # GUI SSD Slow Mark
 
+[![GitHub all releases](https://img.shields.io/github/downloads/KaioHSG/gui-ssd-slow-mark/total)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases)
+[![GitHub contributors](https://img.shields.io/github/contributors-anon/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/contributors)
+[![GitHub repo stars](https://img.shields.io/github/stars/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/stargazers)
+[![Java version](https://img.shields.io/badge/java-21-red?link=https%3A%2F%2Fwww.java.com%2F)](https://www.java.com)
+
 *Check how slow your SSD is.*
 
 ## Why GUI SSD Slow Mark?
