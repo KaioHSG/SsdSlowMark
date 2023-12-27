@@ -6,28 +6,32 @@
 
 After discovering that conventional programs like *CrystalDiskMark* only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching), which normally does not exceed 10 GB. I decided to use SSD SlowMark, and realized that I could create an interface for it and make it easier for everyone. So I created the **GUI SSD Slow Mark**, which is an unofficial version of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark).
 
-<details>
- <summary><h3>Interface images</h3></summary>
+![GUI SSD Slow Mark](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/fd3c046b-8d4a-4750-bf88-b13bb804a85c)
 
- **Menu**
+### Comparison
 
- ![Menu](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/fd3c046b-8d4a-4750-bf88-b13bb804a85c)
- 
- **Credits**
- 
- ![Credits](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/f0a74c79-579e-4c1a-a410-8a729b58d8c0)
- 
- **Log**
- 
- ![Log](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/6b7f9de7-7572-49bb-95bf-19924674bc7e)
+![Other tools](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/same-from-other-tools.png)
 
-</details>
+![SSD SlowMark](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/sample-write-chart.png)
 
 ## How to test?
 
 **1**. Download a version of [**GUI SSD Slow Mark**](https://github.com/kaiohsg/gui-ssd-slow-mark/releases/latest) (`GUI-SSD-Slow-Mark.exe` is best).
 
 **2**. If you downloaded `GUI-SSD-Slow-Mark.exe` just run it. If you downloaded `GUI-SSD-Slow-Mark.jar` you will need [**Java**](https://www.java.com/download).
+
+### You can already use it, but here are some explanations:
+
+* `File count` = Count of generated files.
+* `File size` = Size of every file.
+* `Block size` = Minimum amount of reading and writing.
+
+* `Dump folder` = Folder where the files generated for the test are located.
+* `Results folder` = Test results folder.
+
+* `Images` = Configuration for generated images.
+
+* `Test type` = Indicates what type of test (writing/reading/writing and reading). For reading testing, files must be previously generated.
 
 ## What's in report?
 
