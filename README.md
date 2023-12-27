@@ -15,7 +15,11 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ### Comparison
 
+Other tools:
+
 ![Other tools](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/same-from-other-tools.png)
+
+SSD SlowMark:
 
 ![SSD SlowMark](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/sample-write-chart.png)
 
