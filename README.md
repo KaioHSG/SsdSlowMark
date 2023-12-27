@@ -24,6 +24,7 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 * `File count` = Count of generated files.
 * `File size` = Size of every file.
+  * `File count` * `File size` = Total size of all files.
 * `Block size` = Minimum amount of reading and writing.
 
 * `Dump folder` = Folder where the files generated for the test are located.
