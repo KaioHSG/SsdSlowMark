@@ -236,6 +236,7 @@ public class Gui extends JFrame implements ActionListener{
             creditsDialog.setTitle("Credits");
             creditsDialog.setSize(200, 100);
             creditsDialog.setLayout(new GridLayout(0,1));
+            creditsDialog.setAlwaysOnTop(true);
 
             JLabel label;
 

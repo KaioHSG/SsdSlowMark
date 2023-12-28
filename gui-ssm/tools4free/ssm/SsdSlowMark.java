@@ -12,7 +12,7 @@ import static java.util.Locale.US;
 
 public class SsdSlowMark {
 
-    public static String gssmVersion = "1.2.4";
+    public static String gssmVersion = "1.2.4.1";
     static String javaVersion;
     static String versionInfo;
     static SysInfo si;
@@ -37,8 +37,6 @@ public class SsdSlowMark {
     public static boolean exitOpen;
 
     public static void main(String[] args) throws Exception {
-
-        System.out.println(originalOut);
 
         config = new Config().fromArgs(args);
 
