@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/version-1.2.4.1-green)](https://github.com/kaiohsg/gui-ssd-slow-mark/releases/latest)
+[![Version](https://img.shields.io/badge/version-1.2.4.1-green)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KaioHSG/gui-ssd-slow-mark/total)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases)
 [![Stars](https://img.shields.io/github/stars/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/stargazers)
 [![All contributors](https://img.shields.io/github/contributors-anon/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/contributors)
@@ -26,7 +26,7 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ## How to test?
 
-**1**. Download a version of [**GUI SSD Slow Mark**](https://github.com/kaiohsg/gui-ssd-slow-mark/releases/latest) (`GUI-SSD-Slow-Mark.exe` is best).
+**1**. Download a version of [**GUI SSD Slow Mark**](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest) (`GUI-SSD-Slow-Mark.exe` is best).
 
 **2**. If you downloaded `GUI-SSD-Slow-Mark.exe` just run it. If you downloaded `GUI-SSD-Slow-Mark.jar` you will need [**Java**](https://www.java.com/download).
 
