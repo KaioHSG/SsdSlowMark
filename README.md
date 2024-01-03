@@ -55,23 +55,23 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 <table>
 <td>
 
-* `fc` = Number of generated files (required to use without GUI).
-* `fs` = MB, size of one output file.
-* `bs` = KB, block size.
+* `fc` = Number of files (required to use without GUI).
+* `fs` = Size of files (MB).
+* `bs` = Block size (KB).
 
-* `dump` = Directory to generate output and read input file.
-* `res` = Base name for output folder.
+* `dump` = Dump directory ("path").
+* `res` = Results folder ("path").
 
 </td>
 <td>
 
-* `iw` = px, width of the output image.
-* `ih` = px, height of the output image
-* `ip` = px, padding of the image.
+* `iw` = Width of images (px).
+* `ih` = Height of images (px).
+* `ip` = Padding of images (px).
 
-* `test` = r | w | rw.
+* `test` = Read (r) / write (w) / read and write (rw).
 
-* `gui` = true | false
+* `gui` = Log GUI (true / false).
 
 </td>
 </table>
