@@ -16,11 +16,11 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 * Other tools:
 
-![Other tools](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/same-from-other-tools.png)
+![Other tools](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/d744945f-465f-4bb0-94cd-0ac8e3d2ec58)
 
 * SSD SlowMark:
 
-![SSD SlowMark](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/sample-write-chart.png)
+![SSD SlowMark](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/fb5e4369-8b2a-44bf-8e86-9c3b32cf595a)
 
 ## How to test?
 
@@ -96,11 +96,11 @@ In generated report you will find:
 
   * Most typical write speed - How quickly you can fill your disk depends on that.
 
-  ![Report Averages](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/report-averages.png)
+  ![Report Averages](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/cde456f2-c7bf-4e09-90cd-bf919c3eee66)
 
 * Detailed chart of read and write test:
 
-  ![Report Chart](https://raw.githubusercontent.com/tools4free/tools4free.github.io/master/ssd-slow-mark/images/report-chart.png)
+  ![Report Chart](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/eb944387-3238-46ed-ada2-d799fbda70d4)
 
 * Raw metrics are collected into CSV files. You may use them to build aggregated data for multiple drives in Excel or similar tool.
 
