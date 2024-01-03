@@ -26,8 +26,8 @@ public class ResultsAggregator {
     }
 
     public void run() {
-        File in = new File(config.in);
-        File out = new File(config.out);
+        File in = new File(config.dump);
+        File out = new File(config.dump);
         Map<String,StringBuilder> averages = new HashMap<>();
 
         echoLn("Running aggregation in " + in);

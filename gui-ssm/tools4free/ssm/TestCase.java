@@ -66,7 +66,6 @@ public class TestCase extends Thread  {
         float fileSec = (fileNow - fileStarted) / SsdSlowMark.NANO_SEC;
         float filePerfMb = fileMB / fileSec / SsdSlowMark.MB;
 
-        SsdSlowMark.echo("              \r");
         SsdSlowMark.echo("%s: %s = %6.1f MB/s, min = %6.1f MB/s, max = %6.1f MB/s",
                          kind, file, filePerfMb, perfMin, perfMax);
 

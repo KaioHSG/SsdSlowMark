@@ -3,6 +3,7 @@ package tools4free.ssm;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -15,7 +16,7 @@ public class TestWriter extends TestCase {
     List<File> createdFiles = new ArrayList<>(500);
 
     public TestWriter(Config config) {
-        super("Write", config, new File(config.out), null);
+        super("Write", config, new File(config.dump), null);
     }
 
     @Override
@@ -23,7 +24,7 @@ public class TestWriter extends TestCase {
         if( !doWaitFor() )
             return;
 
-        root = new File(config.out);
+        root = new File(config.dump);
         File[] files = root.listFiles();
 
         // cleanup from previous run
@@ -48,12 +49,11 @@ public class TestWriter extends TestCase {
 
         echoLn("");
         echoLn("Files writer:");
-        echoLn("       File count: %s", config.fc);
-        echoLn("       File size: %s MB", config.fs);
-        echoLn("       Block size: %.1f MB", config.bs / 1024.0);
-        echoLn("       Root dir: %s", root.getAbsolutePath());
-        echoLn("       Disk model: %s", diskModel);
-        echoLn("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println(" > Start time = " + new Date());
+        echoLn(" - File count = " + config.fc + ", File size = " + config.fs + " MB, Block size = %.1f MB", config.bs / 1024.0);
+        echoLn(" - Work dir = \"%s\"", root.getAbsolutePath());
+        echoLn(" - Disk model = %s", diskModel);
+        echoLn("---------------------------------------------------------------------------------------------------");
 
         startTime = System.currentTimeMillis();
         try {
@@ -93,7 +93,7 @@ public class TestWriter extends TestCase {
                     }
                 }
 
-                printPerf("Write", file, fileStarted, fileMB, perfMin, perfMax);
+                printPerf(" Write", file, fileStarted, fileMB, perfMin, perfMax);
                 echoLn("");
             }
         }
@@ -105,9 +105,10 @@ public class TestWriter extends TestCase {
         stopTime = System.currentTimeMillis();
         elapsedMs = stopTime - startTime;
 
-        echoLn("-------------------------------------------------------------------------------------------------------------------------------------------------------");
-        echoLn("Write test complete");
-        echoLn("================");
+        echoLn("---------------------------------------------------------------------------------------------------");
+        System.out.println(" > End time = " + new Date());
+        echoLn("====================");
+        echoLn("Write test complete.");
 
         finished = true;
     }

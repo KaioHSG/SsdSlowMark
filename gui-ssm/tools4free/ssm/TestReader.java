@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static java.lang.Math.max;
@@ -18,7 +19,7 @@ import static tools4free.ssm.SsdSlowMark.*;
 public class TestReader extends TestCase {
 
     public TestReader(Config config, TestCase waitFor) {
-        super("Read", config, new File(config.in), waitFor);
+        super("Read", config, new File(config.dump), waitFor);
     }
 
     int cAllBlocksTmp = 0;
@@ -39,9 +40,10 @@ public class TestReader extends TestCase {
 
         echoLn("");
         echoLn("Files reader:");
-        echoLn("       Root dir: %s", root.getAbsolutePath());
-        echoLn("       Disk model: %s", diskModel);
-        echoLn("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println(" > Start time = " + new Date());
+        echoLn(" - Work dir = \"%s\"", root.getAbsolutePath());
+        echoLn(" - Disk model = %s", diskModel);
+        echoLn("---------------------------------------------------------------------------------------------------");
 
         allBlocksTmp.add(blocksTmp);
         startTime = System.currentTimeMillis();
@@ -99,7 +101,7 @@ public class TestReader extends TestCase {
                         return FileVisitResult.CONTINUE;
                     }
 
-                    printPerf("Read", file, fileStarted, fileMB, perfMin, perfMax);
+                    printPerf(" Read", file, fileStarted, fileMB, perfMin, perfMax);
                     echoLn("");
 
                     return FileVisitResult.CONTINUE;
@@ -131,9 +133,10 @@ public class TestReader extends TestCase {
             pos += blocki.length;
         }
 
-        echoLn("-------------------------------------------------------------------------------------------------------------------------------------------------------");
-        echoLn("Read test complete");
-        echoLn("================");
+        echoLn("---------------------------------------------------------------------------------------------------");
+        System.out.println(" > End time = " + new Date());
+        echoLn("====================");
+        echoLn("Read test complete.");
 
         finished = true;
     }

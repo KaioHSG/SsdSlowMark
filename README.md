@@ -1,8 +1,8 @@
 [![Version](https://img.shields.io/badge/version-1.2.4.1-green)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KaioHSG/gui-ssd-slow-mark/total)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases)
-[![Stars](https://img.shields.io/github/stars/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/stargazers)
 [![All contributors](https://img.shields.io/github/contributors-anon/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/contributors)
-[![Java version](https://img.shields.io/badge/java_8-u392-red)](https://www.oracle.com/java/technologies/downloads/#java8)
+[![Java version](https://img.shields.io/badge/java_8-392-red)](https://wiki.openjdk.org/display/jdk8u)
+[![Stars](https://img.shields.io/github/stars/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/stargazers)
 
 # GUI SSD Slow Mark
 
@@ -26,11 +26,14 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ## How to test?
 
-**1**. Download a version of [**GUI SSD Slow Mark**](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest) (`GUI-SSD-Slow-Mark.exe` is best).
+**1**. Download the [**GUI SSD Slow Mark**](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest).
 
-**2**. If you downloaded `GUI-SSD-Slow-Mark.exe` just run it. If you downloaded `GUI-SSD-Slow-Mark.jar` you will need [**Java**](https://www.java.com/download).
+**2**. Now run `GUI-SSD-Slow-Mark.jar` (you will need [**Java**](https://www.java.com/download)).
 
 ### You can already use it, but here are some explanations:
+
+<table>
+<td>
 
 * `File count` = Count of generated files.
 * `File size` = Size of every file.
@@ -43,6 +46,35 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 * `Images` = Configuration for generated images.
 
 * `Test type` = Indicates what type of test (writing/reading/writing and reading). For reading testing, files must be previously generated.
+
+</td>
+</table>
+
+### List of terminal commands:
+
+<table>
+<td>
+
+* `fc` = Number of generated files (required to use without GUI).
+* `fs` = MB, size of one output file.
+* `bs` = KB, block size.
+
+* `dump` = Directory to generate output and read input file.
+* `res` = Base name for output folder.
+
+</td>
+<td>
+
+* `iw` = px, width of the output image.
+* `ih` = px, height of the output image
+* `ip` = px, padding of the image.
+
+* `test` = r | w | rw.
+
+* `gui` = true | false
+
+</td>
+</table>
 
 ## What's in report?
 

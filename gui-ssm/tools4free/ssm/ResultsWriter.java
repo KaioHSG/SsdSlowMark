@@ -24,12 +24,14 @@ public class ResultsWriter {
 
     Config config;
 
+    static File rptDir;
+    public static File summaryFile;
+
     public ResultsWriter(Config config) {
         this.config = config;
     }
 
     public File writeTestResults(TestCase testCase) {
-        System.setOut(new SsdSlowMark().originalOut);
 
         String testKind = testCase.testKind;
         File tcRoot = testCase.root;
@@ -43,7 +45,7 @@ public class ResultsWriter {
 
         String baseFileName = diskModel.replace(' ', '_') + "_(" + testKind + "-" + iDataSizeGb + "gb)";
         ZonedDateTime now = ZonedDateTime.ofInstant(ofEpochMilli(testStart), ZoneId.systemDefault());
-        File rptDir = new File(new File(config.rpt), diskModel.replace(' ', '_') + "_" + DTF_YMD_HMS.format(now));
+        rptDir = new File(new File(config.res), diskModel.replace(' ', '_') + "_" + DTF_YMD_HMS.format(now));
         rptDir.mkdirs();
 
         int maxWidth = config.iw - config.ip * 2;
@@ -226,13 +228,11 @@ public class ResultsWriter {
                 taWrite == null ? ""
                                 : String.format(US, "<img src='%s'/>", taWrite.fileName.replace("Average.csv", "Chart.png")));
 
-        File summaryFile = new File(rptDir, diskModel.replace(' ', '_') + "_Summary.html");
+        summaryFile = new File(rptDir, diskModel.replace(' ', '_') + "_Summary.html");
         try {
             Files.write(summaryFile.toPath(), html.getBytes(UTF_8));
             //echoLn("HTML report: " + summaryFile.getAbsolutePath());
-            // Exit Open
-            if (SsdSlowMark.exitOpen)
-                Desktop.getDesktop().open(summaryFile);
+            //Desktop.getDesktop().open(summaryFile);
         }
         catch( IOException e ) {
             System.err.println("Failed to write to " + summaryFile + ": " + e.getMessage());

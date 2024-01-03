@@ -4,40 +4,41 @@ import kaiohsg.gui.Gui;
 
 public class Config {
 
-    String test;   // r | w | rw
+    String test = "rw";     // r | w | rw
 
-    int bs;        // KB, block size
-    int fs;        // MB, size of one output file
-    int fc;        // number of generated files
+    int bs = 8192;          // KB, block size
+    int fs = 1024;          // MB, size of one output file
+    int fc;                 // number of generated files
 
-    String out;    // directory to generate output files
-    String in;     // directory to read input file
-    String rpt;    // base name for output folder
+    String dump = "dump";   // directory to generate output and read input file
+    String res = "Results"; // base name for output folder
 
-    int iw;        // px, width of the output image
-    int ih;        // px, height of the output image
-    int ip;        // px, padding of the image
+    int iw = 800;           // px, width of the output image
+    int ih = 600;           // px, height of the output image
+    int ip = 60;            // px, padding of the image
 
     public Config fromArgs(String[] args) throws InterruptedException {
+        if (args.length < 1){
+            Gui gui = new Gui();
 
-        Gui gui = new Gui();
+            SsdSlowMark.showGui = true;
 
-        while (!gui.startSsm)
-            Thread.sleep(0);
+            while (!gui.startSsm)
+                Thread.sleep(0);
 
-        fc = gui.fileCount;
-        fs = gui.fileSize;
-        bs = gui.blockSize;
+            fc = gui.fileCount;
+            fs = gui.fileSize;
+            bs = gui.blockSize;
 
-        out = gui.dumpFolder;
-        in = gui.dumpFolder;
-        rpt = "./" + gui.resultFolder;
+            dump = gui.dumpFolder;
+            res = "./" + gui.resultFolder;
 
-        iw = gui.imageWidth;
-        ih = gui.imageHeight;
-        ip = gui.imagePadding;
+            iw = gui.imageWidth;
+            ih = gui.imageHeight;
+            ip = gui.imagePadding;
 
-        test = gui.testType;
+            test = gui.testType;
+        }
 
         Thread.sleep(500);
 
@@ -54,13 +55,14 @@ public class Config {
                 case "bs":      bs = Integer.parseInt(value); break;
                 case "fs":      fs = Integer.parseInt(value); break;
                 case "fc":      fc = Integer.parseInt(value); break;
-                case "out":     out = value; break;
-                case "in":      in = value; break;
+                case "dump":    dump = value; break;
 
-                case "rpt":     rpt = value; break;
+                case "res":     res = value; break;
                 case "iw":      iw = Integer.parseInt(value); break;
                 case "ih":      ih = Integer.parseInt(value); break;
                 case "ip":      ip = Integer.parseInt(value); break;
+
+                case "gui":     SsdSlowMark.showGui = Boolean.parseBoolean(value); break;
 
                 default:        SsdSlowMark.exit(1, "Unsupported arg: " + value);
             }

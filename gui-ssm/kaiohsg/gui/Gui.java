@@ -22,7 +22,7 @@ import tools4free.ssm.SsdSlowMark;
 
 public class Gui extends JFrame implements ActionListener{
     JSpinner fileCountSpinner;
-    public int fileCount = 1000;
+    public int fileCount = 20;
 
     JSpinner fileSizeSpinner;
     public int fileSize = 1024;

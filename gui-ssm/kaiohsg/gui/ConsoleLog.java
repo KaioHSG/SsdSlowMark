@@ -1,5 +1,6 @@
 package kaiohsg.gui;
 
+import java.awt.Desktop;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,12 +16,11 @@ import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.TitledBorder;
 
-import tools4free.ssm.SsdSlowMark;
+import tools4free.ssm.ResultsWriter;
 
 public class ConsoleLog extends JFrame implements ActionListener{
     JButton exitButton;
     JButton exitOpenButton;
-    public boolean exitOpen = false;
 
     public ConsoleLog() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -69,10 +69,6 @@ public class ConsoleLog extends JFrame implements ActionListener{
         setVisible(true);
     }
 
-    void title() {
-        
-    }
-
     public class CustomOutputStream extends OutputStream {
         private JTextArea logTextArea;
         public CustomOutputStream(JTextArea logTextArea) {
@@ -91,7 +87,9 @@ public class ConsoleLog extends JFrame implements ActionListener{
         if(e.getSource() == exitButton)
             System.exit(0);
         if (e.getSource() == exitOpenButton) {
-            SsdSlowMark.exitOpen = true;
+            try {
+                Desktop.getDesktop().open(ResultsWriter.summaryFile);
+            } catch (IOException e1) {}
             System.exit(0);
         }
     }

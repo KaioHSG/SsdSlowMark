@@ -12,7 +12,7 @@ import static java.util.Locale.US;
 
 public class SsdSlowMark {
 
-    public static String gssmVersion = "1.2.4.1";
+    public static String gssmVersion = "1.2.4.2";
     static String javaVersion;
     static String versionInfo;
     static SysInfo si;
@@ -34,13 +34,14 @@ public class SsdSlowMark {
 
     public static PrintStream originalOut = System.out;
 
-    public static boolean exitOpen;
+    static boolean showGui;
 
     public static void main(String[] args) throws Exception {
 
         config = new Config().fromArgs(args);
 
-        new ConsoleLog();
+        if (showGui)
+            new ConsoleLog();
 
         si = new SysInfo();
         versionInfo = versionInfo();
@@ -107,7 +108,7 @@ public class SsdSlowMark {
 
     static String versionInfo() {
         javaVersion = javaVersion();
-        return "GUI SSD Slow Mark - " + gssmVersion
+        return      "GUI SSD Slow Mark - " + gssmVersion
                     + ", CPU: " + si.cpuModel
                     + ", MB: " + si.motherBoard
                     + ", OS: " + si.osVersion
@@ -130,7 +131,6 @@ public class SsdSlowMark {
         }
 
         statsWriting = true;
-        System.out.println(exitOpen);
         try {
             File rptDir = null;
             if( writer != null && writer.finished )
@@ -164,10 +164,10 @@ public class SsdSlowMark {
 
     private static void progressMonitor() {
         waitFinished();
-        /* FINISH EXIT
-        if(writeResults())
+        if(writeResults() && !showGui) {
+            System.out.println("\n* Results saved in: \"" + ResultsWriter.rptDir.getAbsolutePath() + "\" *\n");
             System.exit(0);
-        */
+        }
     }
 
     private static void waitFinished() {
