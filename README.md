@@ -12,8 +12,6 @@
 
 After discovering that conventional programs like *CrystalDiskMark* only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching), which normally does not exceed 10 GB. I decided to use SSD SlowMark, and realized that I could create an interface for it and make it easier for everyone. So I created the **GUI SSD Slow Mark**, which is an unofficial version of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark).
 
-![GUI SSD Slow Mark](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/fd3c046b-8d4a-4750-bf88-b13bb804a85c)
-
 ### Comparison
 
 * Other tools:
@@ -29,6 +27,8 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 **1**. Download the [**GUI SSD Slow Mark**](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest).
 
 **2**. Now run `GUI-SSD-Slow-Mark.jar` (you will need [**Java**](https://www.java.com/download)).
+
+![GUI SSD Slow Mark](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/fd3c046b-8d4a-4750-bf88-b13bb804a85c)
 
 ### You can already use it, but here are some explanations:
 
