@@ -76,6 +76,12 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 </td>
 </table>
 
+**Exemple:**
+
+``` console
+java -jar GUI-SSD-Slow-Mark.jar fc=40 fs=512
+```
+
 ## What's in report?
 
 In generated report you will find:
