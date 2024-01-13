@@ -2,6 +2,8 @@
 [![Downloads](https://img.shields.io/github/downloads/KaioHSG/gui-ssd-slow-mark/total)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases)
 [![All contributors](https://img.shields.io/github/contributors-anon/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/contributors)
 [![Java version](https://img.shields.io/badge/java_8-392-red)](https://wiki.openjdk.org/display/jdk8u)
+[![Bugs](https://img.shields.io/badge/results-📈-blue)](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/results)
+[![Bugs](https://img.shields.io/badge/problems--bugs-🐞-blue)](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/problems-bugs)
 [![Stars](https://img.shields.io/github/stars/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/stargazers)
 
 # GUI SSD Slow Mark
@@ -103,6 +105,15 @@ In generated report you will find:
   [![Report Chart](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/eb944387-3238-46ed-ada2-d799fbda70d4)](#)
 
 * Raw metrics are collected into CSV files. You may use them to build aggregated data for multiple drives in Excel or similar tool.
+
+## User results
+
+You can post your results and discuss them on the [results](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/results) page.
+
+## Problems & bugs
+
+You can post your problems and bugs on the [problems/bugs](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/problems-bugs) page. 
+(Note: the program has been forked, so I don't have full knowledge to solve more complex problems, but I should try to fix any inconsistencies.)
 
 ## Credits
 
