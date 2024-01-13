@@ -110,7 +110,7 @@ You can post your results and discuss them on the [results](https://github.com/K
 
 ## Problems & bugs
 
-You can post your problems and bugs on the [problems/bugs](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/problems-bugs) page. 
+You can post your problems and bugs on the [problems & bugs](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/problems-bugs) page. 
 (Note: the program has been forked, so I don't have full knowledge to solve more complex problems, but I should try to fix any inconsistencies.)
 
 ## Credits
