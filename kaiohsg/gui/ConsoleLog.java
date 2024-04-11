@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -30,7 +31,8 @@ public class ConsoleLog extends JFrame implements ActionListener{
         setLayout(null);
         setTitle("GUI SSD Slow Mark - Log");
         setSize(650, 380);
-        ImageIcon icon = new ImageIcon("icon-gui-ssm.png");
+        URL iconURL = getClass().getResource("icon-gui-ssm.png");
+        ImageIcon icon = new ImageIcon(iconURL);
         setIconImage(icon.getImage());
 
         // Log Panel
