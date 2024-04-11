@@ -39,14 +39,13 @@ public class SsdSlowMark {
     public static void main(String[] args) throws Exception {
 
         config = new Config().fromArgs(args);
-
+        
         if (log)
             new ConsoleLog();
 
         si = new SysInfo();
         versionInfo = versionInfo();
         echoLn("* " + versionInfo + " *");
-        echoLn("");
         switch( config.test ) {
             case "agg":
                 new ResultsAggregator(config).run();
@@ -166,7 +165,7 @@ public class SsdSlowMark {
     private static void progressMonitor() {
         waitFinished();
         if(writeResults() && !log) {
-            System.out.println("* Results saved in: \"" + ResultsWriter.rptDir.getAbsolutePath() + "\" *\n");
+            System.out.println("\n* Results saved in: \"" + ResultsWriter.rptDir.getAbsolutePath() + "\" *\n");
             System.exit(0);
         }
     }
@@ -180,7 +179,7 @@ public class SsdSlowMark {
     static void exit(int code, String message) {
         System.err.println(message);
         System.exit(code);
-        throw new IllegalStateException("Aborted.");
+        throw new IllegalStateException("aborted");
     }
 
 
