@@ -1,4 +1,4 @@
-[![Version](https://img.shields.io/badge/version-1.2.4.3-green)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest)
+[![Version](https://img.shields.io/badge/version-1.2.4.3-green)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/1.2.4.3)
 [![Downloads](https://img.shields.io/github/downloads/KaioHSG/gui-ssd-slow-mark/total)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases)
 [![All contributors](https://img.shields.io/github/contributors-anon/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/contributors)
 [![Java version](https://img.shields.io/badge/java_8-392--08-red)](https://wiki.openjdk.org/display/jdk8u)
