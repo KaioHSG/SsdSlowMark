@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,11 +24,14 @@ public class ConsoleLog extends JFrame implements ActionListener{
     JButton exitOpenButton;
 
     public ConsoleLog() {
+        // Window
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLayout(null);
         setTitle("GUI SSD Slow Mark - Log");
         setSize(650, 380);
+        ImageIcon icon = new ImageIcon("src/img/icon-gui-ssm-32.png");
+        setIconImage(icon.getImage());
 
         // Log Panel
         JPanel logPanel = new JPanel();

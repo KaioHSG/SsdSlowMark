@@ -4,11 +4,11 @@ import kaiohsg.gui.Gui;
 
 public class Config {
 
-    String test = "rw";     // r | w | rw
+    String test = "wr";     // w | r | wr
 
     int bs = 8192;          // KB, block size
     int fs = 1024;          // MB, size of one output file
-    int fc;                 // number of generated files
+    int fc = 20;            // number of generated files
 
     String dump = "dump";   // directory to generate output and read input file
     String res = "Results"; // base name for output folder
@@ -21,7 +21,7 @@ public class Config {
         if (args.length < 1){
             Gui gui = new Gui();
 
-            SsdSlowMark.showGui = true;
+            SsdSlowMark.log = true;
 
             while (!gui.startSsm)
                 Thread.sleep(0);
@@ -52,17 +52,19 @@ public class Config {
 
             switch( name ) {
                 case "test":    test = value; break;
+
                 case "bs":      bs = Integer.parseInt(value); break;
                 case "fs":      fs = Integer.parseInt(value); break;
                 case "fc":      fc = Integer.parseInt(value); break;
-                case "dump":    dump = value; break;
 
+                case "dump":    dump = value; break;
                 case "res":     res = value; break;
+
                 case "iw":      iw = Integer.parseInt(value); break;
                 case "ih":      ih = Integer.parseInt(value); break;
                 case "ip":      ip = Integer.parseInt(value); break;
 
-                case "gui":     SsdSlowMark.showGui = Boolean.parseBoolean(value); break;
+                case "log":     SsdSlowMark.log = Boolean.parseBoolean(value); break;
 
                 default:        SsdSlowMark.exit(1, "Unsupported arg: " + value);
             }
@@ -78,9 +80,9 @@ public class Config {
             SsdSlowMark.exit(1, "Invalid fc: " + fc);
 
         switch( test ) {
-            case "r":
-            case "rw":
             case "w":
+            case "r":
+            case "wr":
             case "agg":
                 break;
             default:   SsdSlowMark.exit(1, "Unsupported test: " + test);

@@ -38,7 +38,6 @@ public class TestReader extends TestCase {
         float blockSizeMb = config.bs / (float)KB;
         byte[] data = new byte[blockSize];
 
-        echoLn("");
         echoLn("Files reader:");
         System.out.println(" > Start time = " + new Date());
         echoLn(" - Work dir = \"%s\"", root.getAbsolutePath());
@@ -137,6 +136,7 @@ public class TestReader extends TestCase {
         System.out.println(" > End time = " + new Date());
         echoLn("====================");
         echoLn("Read test complete.");
+        echoLn("");
 
         finished = true;
     }

@@ -47,7 +47,6 @@ public class TestWriter extends TestCase {
 
         File file = null;
 
-        echoLn("");
         echoLn("Files writer:");
         System.out.println(" > Start time = " + new Date());
         echoLn(" - File count = " + config.fc + ", File size = " + config.fs + " MB, Block size = %.1f MB", config.bs / 1024.0);
@@ -109,6 +108,7 @@ public class TestWriter extends TestCase {
         System.out.println(" > End time = " + new Date());
         echoLn("====================");
         echoLn("Write test complete.");
+        echoLn("");
 
         finished = true;
     }

@@ -198,7 +198,7 @@ public class ResultsWriter {
             }
         }
 
-        String html = resourceAsString(this, "report-template.html");
+        String html = resourceAsString(this, "../../src/html/report-template.html");
 
         //System.out.println(html);
 
@@ -240,6 +240,7 @@ public class ResultsWriter {
     }
 
     public String resourceAsString(Object obj, String resourcePath) {
+        @SuppressWarnings("rawtypes")
         Class cls = (obj instanceof Class) ? (Class)obj : obj.getClass();
         InputStream is = cls.getResourceAsStream(resourcePath);
         if( is != null ) {
@@ -257,25 +258,25 @@ public class ResultsWriter {
         int iDataSizeGb = Math.max(1, Math.round(last.offsetMb / 1024));
         StringBuilder captions = new StringBuilder(iDataSizeGb * 5);
         StringBuilder values = new StringBuilder(iDataSizeGb * 10);
-        Formatter valueF = new Formatter(values);
-        int cBlocksPerGB = chunks.size() / iDataSizeGb;
+        try (Formatter valueF = new Formatter(values)) {
+            int cBlocksPerGB = chunks.size() / iDataSizeGb;
 
-        captions.append("Offset GB");
-        values.append(diskModel);
-        for( int i = 0; i < iDataSizeGb; i++ ) {
-            int midPos = i * cBlocksPerGB + cBlocksPerGB / 2;
-            int from = Math.max(0, midPos - cBlocksPerGB);
-            int to = Math.min(chunks.size() - 1, midPos + cBlocksPerGB);
-            float sum = 0;
+            captions.append("Offset GB");
+            values.append(diskModel);
+            for( int i = 0; i < iDataSizeGb; i++ ) {
+                int midPos = i * cBlocksPerGB + cBlocksPerGB / 2;
+                int from = Math.max(0, midPos - cBlocksPerGB);
+                int to = Math.min(chunks.size() - 1, midPos + cBlocksPerGB);
+                float sum = 0;
 
-            for( int j = from; j <= to; j++ ) {
-                sum += chunks.get(j).avg;
+                for( int j = from; j <= to; j++ ) {
+                    sum += chunks.get(j).avg;
+                }
+
+                captions.append(',').append(i + 1);
+                values.append(','); valueF.format(US, "%.1f", sum / (to - from));
             }
-
-            captions.append(',').append(i + 1);
-            values.append(','); valueF.format(US, "%.1f", sum / (to - from));
         }
-
         captions.append('\n');
         values.append('\n');
         try( OutputStream fos = new FileOutputStream(fileAvg) ) {
@@ -285,7 +286,7 @@ public class ResultsWriter {
             }
             //echoLn("CSV report: " + fileAvg.getAbsolutePath());
 
-            Pctls pctls = buildPctls(chunks);
+            //Pctls pctls = buildPctls(chunks);
             //echoLn(pctls.toString());
         }
         catch( Exception e ) {

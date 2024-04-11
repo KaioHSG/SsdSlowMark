@@ -12,7 +12,7 @@ import static java.util.Locale.US;
 
 public class SsdSlowMark {
 
-    public static String gssmVersion = "1.2.4.2";
+    public static String gssmVersion = "1.2.4.3";
     static String javaVersion;
     static String versionInfo;
     static SysInfo si;
@@ -34,18 +34,19 @@ public class SsdSlowMark {
 
     public static PrintStream originalOut = System.out;
 
-    static boolean showGui;
+    static boolean log;
 
     public static void main(String[] args) throws Exception {
 
         config = new Config().fromArgs(args);
 
-        if (showGui)
+        if (log)
             new ConsoleLog();
 
         si = new SysInfo();
         versionInfo = versionInfo();
         echoLn("* " + versionInfo + " *");
+        echoLn("");
         switch( config.test ) {
             case "agg":
                 new ResultsAggregator(config).run();
@@ -164,8 +165,8 @@ public class SsdSlowMark {
 
     private static void progressMonitor() {
         waitFinished();
-        if(writeResults() && !showGui) {
-            System.out.println("\n* Results saved in: \"" + ResultsWriter.rptDir.getAbsolutePath() + "\" *\n");
+        if(writeResults() && !log) {
+            System.out.println("* Results saved in: \"" + ResultsWriter.rptDir.getAbsolutePath() + "\" *\n");
             System.exit(0);
         }
     }
@@ -179,7 +180,7 @@ public class SsdSlowMark {
     static void exit(int code, String message) {
         System.err.println(message);
         System.exit(code);
-        throw new IllegalStateException("aborted");
+        throw new IllegalStateException("Aborted.");
     }
 
 

@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -56,11 +57,14 @@ public class Gui extends JFrame implements ActionListener{
     public boolean startSsm;
 
     public Gui() {
+        // Window
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLayout(null);
         setTitle("GUI SSD Slow Mark");
         setSize(650, 380);
+        ImageIcon icon = new ImageIcon("src/img/icon-gui-ssm-32.png");
+        setIconImage(icon.getImage());
 
         JLabel label;
 
@@ -210,12 +214,12 @@ public class Gui extends JFrame implements ActionListener{
         dumpFolder = dumpTextField.getText();
         resultFolder = resultTextField.getText();
 
-        if (rButton.isSelected())
-            testType = "r";
         if (wButton.isSelected())
             testType = "w";
+        if (rButton.isSelected())
+            testType = "r";
         if (rwButton.isSelected())
-            testType = "rw";
+            testType = "wr";
 
         if(e.getSource() == starButton) {
             // Start SSM
@@ -253,5 +257,4 @@ public class Gui extends JFrame implements ActionListener{
             creditsDialog.setVisible(true);
         }
     }
-
 }
