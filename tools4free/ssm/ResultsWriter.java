@@ -198,7 +198,7 @@ public class ResultsWriter {
             }
         }
 
-        String html = resourceAsString(this, "../../src/html/report-template.html");
+        String html = resourceAsString(this, "report-template.html");
 
         //System.out.println(html);
 
