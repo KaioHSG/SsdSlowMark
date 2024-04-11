@@ -31,7 +31,7 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ### You can already use it, but here are some explanations:
 
-|Command|Description|
+|Option|Description|
 |-|-|
 |`File count`|Count of generated files.|
 |`File size`|Size of every file.|
