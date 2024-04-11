@@ -3,6 +3,7 @@ package kaiohsg.gui;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
@@ -63,7 +64,8 @@ public class Gui extends JFrame implements ActionListener{
         setLayout(null);
         setTitle("GUI SSD Slow Mark");
         setSize(650, 380);
-        ImageIcon icon = new ImageIcon("src/img/icon-gui-ssm-32.png");
+        URL iconURL = getClass().getResource("icon-gui-ssm.png");
+        ImageIcon icon = new ImageIcon(iconURL);
         setIconImage(icon.getImage());
 
         JLabel label;

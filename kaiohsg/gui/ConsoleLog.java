@@ -30,7 +30,7 @@ public class ConsoleLog extends JFrame implements ActionListener{
         setLayout(null);
         setTitle("GUI SSD Slow Mark - Log");
         setSize(650, 380);
-        ImageIcon icon = new ImageIcon("src/img/icon-gui-ssm-32.png");
+        ImageIcon icon = new ImageIcon("icon-gui-ssm.png");
         setIconImage(icon.getImage());
 
         // Log Panel
