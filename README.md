@@ -31,55 +31,35 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ### You can already use it, but here are some explanations:
 
-<table>
-<td>
+|Option|Description|
+|-|-|
+|`File count`|Count of generated files.|
+|`File size`|Size of every file.|
+|`Block size`|Minimum amount of reading and writing.|
+|`Dump folder`|Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it.|
+|`Results folder`|Test results folder. It must be kept in the program directory.|
+|`Images`|Configuration for generated images.|
+|`Test type`|Indicates what type of test (writing/reading/writing and reading). For reading testing, files must be previously generated.|
 
-* `File count` = Count of generated files.
-* `File size` = Size of every file.
-  * `File count` * `File size` = Total size of all files.
-* `Block size` = Minimum amount of reading and writing.
-
-* `Dump folder` = Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it.
-* `Results folder` = Test results folder. It must be kept in the program directory.
-
-* `Images` = Configuration for generated images.
-
-* `Test type` = Indicates what type of test (writing/reading/writing and reading). For reading testing, files must be previously generated.
-
-</td>
-</table>
+**Note:** `File count` × `File size` = Total size of all files.
 
 ### List of terminal commands:
 
-<table>
-<td>
-
-* `fc` = Number of files (required to use without GUI).
-* `fs` = Size of files (MB).
-* `bs` = Block size (KB).
-
-* `dump` = Dump directory ("path").
-* `res` = Results folder ("path").
-
-</td>
-<td>
-
-* `iw` = Width of images (px).
-* `ih` = Height of images (px).
-* `ip` = Padding of images (px).
-
-* `test` = Read (r) / write (w) / read and write (rw).
-
-* `gui` = Log GUI (true / false).
-
-</td>
-</table>
+|Command|Description|Command|Description|
+|-|-|-|-|
+|`fc`|Number of files (required to use without GUI).|`iw`|Width of images (px).|
+|`fs`|Size of files (MB).|`ih`|Height of images (px).|
+|`bs`|Block size (KB).|`ip`|Padding of images (px).|
+|`dump`|Dump directory ("path").|`test`|Read (r) / write (w) / read and write (rw).|
+|`res`|Results folder ("path").|`log`|Log GUI (true / false).|
 
 **Exemple:**
 
 ``` console
 java -jar GUI-SSD-Slow-Mark.jar fc=40 fs=512
 ```
+
+**Note:** `fc` × `fs` = Total size of all files.
 
 ## What's in report?
 
