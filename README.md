@@ -45,13 +45,18 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ### List of terminal commands:
 
-|Command|Description|Command|Description|
-|-|-|-|-|
-|`fc`|Number of files.|`iw`|Width of images (px).|
-|`fs`|Size of files (MB).|`ih`|Height of images (px).|
-|`bs`|Block size (KB).|`ip`|Padding of images (px).|
-|`dump`|Dump directory ("path").|`test`|Write (w) / read (r) / write read and (wr).|
-|`res`|Results folder ("path").|`log`|Log GUI (true / false).|
+|Command|Description|
+|-|-|
+|`fc`|Number of files.|
+|`fs`|Size of files (MB).|
+|`bs`|Block size (KB).|
+|`dump`|Dump directory ("path").|
+|`res`|Results folder ("path").|
+|`iw`|Width of images (px).|
+|`ih`|Height of images (px).|
+|`ip`|Padding of images (px).|
+|`test`|Write (w) / read (r) / write read and (wr).|
+|`log`|Log GUI (true / false).|
 
 **Exemple:**
 
