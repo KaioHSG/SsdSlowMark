@@ -10,7 +10,7 @@
 
 ## Why GUI SSD Slow Mark?
 
-After discovering that conventional programs like *CrystalDiskMark* only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching), which normally does not exceed 10 GB. I decided to use SSD SlowMark, and realized that I could create an interface for it and make it easier for everyone. So I created the **GUI SSD Slow Mark**, which is an unofficial version of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark).
+After discovering that conventional programs like CrystalDiskMark only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching), which normally does not exceed 10 GB. I decided to use SSD SlowMark, and realized that I could create an interface for it and make it easier for everyone. So I created the GUI SSD Slow Mark, which is an unofficial version of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark).
 
 ### Comparison
 
@@ -24,39 +24,39 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ## How to test?
 
-1. Download the [**GUI SSD Slow Mark**](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest).
-2. Now run `GUI-SSD-Slow-Mark.jar` (you will need [**Java**](https://www.java.com/download)).
+1. Download the [GUI SSD Slow Mark](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest).
+2. Now run `GUI-SSD-Slow-Mark`.
 
 [![GUI SSD Slow Mark](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/4da2274c-e794-47ab-abbd-02a54fd8029e)](#)
 
 ### You can already use it, but here are some explanations:
 
-|Option|Description|
-|-|-|
-|`File count`|Count of generated files.|
-|`File size`|Size of every file.|
-|`Block size`|Minimum amount of reading and writing.|
-|`Dump folder`|Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it.|
-|`Results folder`|Test results folder. It must be kept in the program directory.|
-|`Images`|Configuration for generated images.|
-|`Test type`|Indicates what type of test. For reading testing, files must be previously generated.|
+|     Option      |                                                              Description                                                              |
+|-----------------|---------------------------------------------------------------------------------------------------------------------------------------|
+|`File count`     |Count of generated files.                                                                                                              |
+|`File size`      |Size of every file.                                                                                                                    |
+|`Block size`     |Minimum amount of reading and writing.                                                                                                 |
+|`Dump folder`    |Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it. |
+|`Results folder` |Test results folder. It must be kept in the program directory.                                                                         |
+|`Images`         |Configuration for generated images.                                                                                                    |
+|`Test type`      |Indicates what type of test. For reading testing, files must be previously generated.                                                  |
 
 **Note:** `File count` × `File size` = Total size of all files.
 
 ### List of terminal commands:
 
-|Command|Description|
-|-|-|
-|`fc`|Number of files.|
-|`fs`|Size of files (`MB`).|
-|`bs`|Block size (`KB`).|
-|`dump`|Dump directory (`"path"`).|
-|`res`|Results folder (`"path"`).|
-|`iw`|Width of images (`px`).|
-|`ih`|Height of images (`px`).|
-|`ip`|Padding of images (`px`).|
-|`test`|Write (`w`) / read (`r`) / write and read (`wr`).|
-|`log`|Log GUI (`true` / `false`).|
+| Command |                   Description                    |
+|---------|--------------------------------------------------|
+|`fc`     |Number of files.                                  |
+|`fs`     |Size of files (`MB`).                             |
+|`bs`     |Block size (`KB`).                                |
+|`dump`   |Dump directory (`"path"`).                        |
+|`res`    |Results folder (`"path"`).                        |
+|`iw`     |Width of images (`px`).                           |
+|`ih`     |Height of images (`px`).                          |
+|`ip`     |Padding of images (`px`).                         |
+|`test`   |Write (`w`) / read (`r`) / write and read (`wr`). |
+|`log`    |Log GUI (`true` / `false`).                       |
 
 **Exemple:**
 
@@ -101,4 +101,4 @@ You can post your problems and bugs on the [problems & bugs](https://github.com/
 
 This is all a fork of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark) created by [tools4free](https://github.com/tools4free). I just made a interface.
 
-**SSD SlowMark** website: https://tools4free.github.io/ssd-slow-mark
+SSD SlowMark website: https://tools4free.github.io/ssd-slow-mark
