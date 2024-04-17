@@ -14,11 +14,11 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ### Comparison
 
-* Other tools:
+* *Other tools*:
 
 [![Other tools](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/d744945f-465f-4bb0-94cd-0ac8e3d2ec58)](#)
 
-* SSD SlowMark:
+* *SSD SlowMark*:
 
 [![SSD SlowMark](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/fb5e4369-8b2a-44bf-8e86-9c3b32cf595a)](#)
 
@@ -99,6 +99,6 @@ You can post your problems and bugs on the [problems & bugs](https://github.com/
 
 ## Credits
 
-This is all a fork of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark) created by [tools4free](https://github.com/tools4free). I just made a interface.
+This is all a fork of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark) created by [tools4free](https://github.com/tools4free). I just made a interface.
 
 *SSD SlowMark* website: https://tools4free.github.io/ssd-slow-mark
