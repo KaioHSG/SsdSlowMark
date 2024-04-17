@@ -55,7 +55,7 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 |`iw`|Width of images (px).|
 |`ih`|Height of images (px).|
 |`ip`|Padding of images (px).|
-|`test`|Write (w) / read (r) / write read and (wr).|
+|`test`|Write (w) / read (r) / write and read (wr).|
 |`log`|Log GUI (true / false).|
 
 **Exemple:**
