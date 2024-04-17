@@ -39,7 +39,7 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 |`Dump folder`|Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it.|
 |`Results folder`|Test results folder. It must be kept in the program directory.|
 |`Images`|Configuration for generated images.|
-|`Test type`|Indicates what type of test (writing/reading/writing and reading). For reading testing, files must be previously generated.|
+|`Test type`|Indicates what type of test. For reading testing, files must be previously generated.|
 
 **Note:** `File count` × `File size` = Total size of all files.
 
