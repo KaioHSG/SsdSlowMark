@@ -31,32 +31,32 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 
 ### You can already use it, but here are some explanations:
 
-|     Option      |                                                              Description                                                              |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------|
-|`File count`     |Count of generated files.                                                                                                              |
-|`File size`      |Size of every file.                                                                                                                    |
-|`Block size`     |Minimum amount of reading and writing.                                                                                                 |
-|`Dump folder`    |Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it. |
-|`Results folder` |Test results folder. It must be kept in the program directory.                                                                         |
-|`Images`         |Configuration for generated images.                                                                                                    |
-|`Test type`      |Indicates what type of test. For reading testing, files must be previously generated.                                                  |
+|Option|Description|
+|-|-|
+|`File count`|Count of generated files.|
+|`File size`|Size of every file.|
+|`Block size`|Minimum amount of reading and writing.|
+|`Dump folder`|Folder where the files generated for the test are located. You can change the disk to be tested by changing to a valid path within it.|
+|`Results folder`|Test results folder. It must be kept in the program directory.|
+|`Images`|Configuration for generated images.|
+|`Test type`|Indicates what type of test. For reading testing, files must be previously generated.|
 
 **Note:** `File count` × `File size` = Total size of all files.
 
 ### List of terminal commands:
 
-| Command |                   Description                    |
-|---------|--------------------------------------------------|
-|`fc`     |Number of files.                                  |
-|`fs`     |Size of files (`MB`).                             |
-|`bs`     |Block size (`KB`).                                |
-|`dump`   |Dump directory (`"path"`).                        |
-|`res`    |Results folder (`"path"`).                        |
-|`iw`     |Width of images (`px`).                           |
-|`ih`     |Height of images (`px`).                          |
-|`ip`     |Padding of images (`px`).                         |
-|`test`   |Write (`w`) / read (`r`) / write and read (`wr`). |
-|`log`    |Log GUI (`true` / `false`).                       |
+|Command|Description|
+|-|-|
+|`fc`|Number of files.|
+|`fs`|Size of files (`MB`).|
+|`bs`|Block size (`KB`).|
+|`dump`|Dump directory (`"path"`).|
+|`res`|Results folder (`"path"`).|
+|`iw`|Width of images (`px`).|
+|`ih`|Height of images (`px`).|
+|`ip`|Padding of images (`px`).|
+|`test`|Write (`w`) / read (`r`) / write and read (`wr`).|
+|`log`|Log GUI (`true` / `false`).|
 
 **Exemple:**
 
