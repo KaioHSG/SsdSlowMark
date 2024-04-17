@@ -10,7 +10,7 @@
 
 ## Why GUI SSD Slow Mark?
 
-After discovering that conventional programs like CrystalDiskMark only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching), which normally does not exceed 10 GB. I decided to use SSD SlowMark, and realized that I could create an interface for it and make it easier for everyone. So I created the GUI SSD Slow Mark, which is an unofficial version of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark).
+After discovering that conventional programs like *CrystalDiskMark* only measure the so-called [SLC cache](https://www.technipages.com/what-is-slc-caching), which normally does not exceed 10 GB. I decided to use SSD SlowMark, and realized that I could create an interface for it and make it easier for everyone. So I created the **GUI SSD Slow Mark**, which is an unofficial version of [*SSD SlowMark*](https://github.com/tools4free/SsdSlowMark).
 
 ### Comparison
 
@@ -24,8 +24,8 @@ After discovering that conventional programs like CrystalDiskMark only measure t
 
 ## How to test?
 
-1. Download the [GUI SSD Slow Mark](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest).
-2. Now run `GUI-SSD-Slow-Mark`.
+1. Download the [**GUI SSD Slow Mark**](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest).
+2. Now run **`GUI-SSD-Slow-Mark`**.
 
 [![GUI SSD Slow Mark](https://github.com/KaioHSG/gui-ssd-slow-mark/assets/96930584/4da2274c-e794-47ab-abbd-02a54fd8029e)](#)
 
@@ -101,4 +101,4 @@ You can post your problems and bugs on the [problems & bugs](https://github.com/
 
 This is all a fork of [SSD SlowMark](https://github.com/tools4free/SsdSlowMark) created by [tools4free](https://github.com/tools4free). I just made a interface.
 
-SSD SlowMark website: https://tools4free.github.io/ssd-slow-mark
+*SSD SlowMark* website: https://tools4free.github.io/ssd-slow-mark
