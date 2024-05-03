@@ -48,15 +48,15 @@ After discovering that conventional programs like *CrystalDiskMark* only measure
 |Command|Description|
 |-|-|
 |`fc`|Number of files.|
-|`fs`|Size of files (`MB`).|
-|`bs`|Block size (`KB`).|
-|`dump`|Dump directory (`"path"`).|
-|`res`|Results folder (`"path"`).|
-|`iw`|Width of images (`px`).|
-|`ih`|Height of images (`px`).|
-|`ip`|Padding of images (`px`).|
-|`test`|Write (`w`) / read (`r`) / write and read (`wr`).|
-|`log`|Log GUI (`true` / `false`).|
+|`fs`|Size of files (MB).|
+|`bs`|Block size (KB).|
+|`dump`|Dump directory ("path").|
+|`res`|Results folder ("path").|
+|`iw`|Width of images (px).|
+|`ih`|Height of images (px).|
+|`ip`|Padding of images (px).|
+|`test`|Write (w) / read (r) / write and read (wr).|
+|`log`|Log GUI (true / false).|
 
 **Exemple:**
 
