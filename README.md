@@ -1,8 +1,8 @@
-[![Version](https://img.shields.io/badge/version-1.2.4.3-green)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/1.2.4.3)
+[![Release](https://img.shields.io/github/v/release/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/KaioHSG/gui-ssd-slow-mark/total)](https://github.com/KaioHSG/gui-ssd-slow-mark/releases)
 [![All contributors](https://img.shields.io/github/contributors-anon/KaioHSG/gui-ssd-slow-mark)](https://github.com/KaioHSG/gui-ssd-slow-mark/contributors)
-[![Java version](https://img.shields.io/badge/java_8-402-red)](https://wiki.openjdk.org/display/jdk8u)
-[![Results](https://img.shields.io/badge/results-📈-blue)](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/results)
+[![Java version](https://img.shields.io/badge/java_8-u402-red)](https://wiki.openjdk.org/display/jdk8u)
+[![Results](https://img.shields.io/badge/results-📈-green)](https://github.com/KaioHSG/gui-ssd-slow-mark/discussions/categories/results)
 
 # GUI SSD Slow Mark
 
